@@ -2,7 +2,7 @@
 Contributors: okvee
 Tags: events, meeting, plans, calendar
 Requires at least: 4.0
-Tested up to: 4.9.4
+Tested up to: 4.9.8
 Stable tag: 0.2.7
 Requires PHP: 5.5
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE
