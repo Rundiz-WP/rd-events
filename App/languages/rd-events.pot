@@ -2,15 +2,15 @@
 # This file is distributed under the same license as the Rundiz Events plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Rundiz Events 0.2.7\n"
+"Project-Id-Version: Rundiz Events 0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rd-events\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-12-08T15:24:42+07:00\n"
-"PO-Revision-Date: 2018-12-08T15:24:42+07:00\n"
+"POT-Creation-Date: 2018-12-08T16:35:27+07:00\n"
+"PO-Revision-Date: 2018-12-08T16:35:27+07:00\n"
 "X-Generator: WP-CLI 2.0.1\n"
 "X-Domain: rd-events\n"
 
@@ -19,7 +19,7 @@ msgid "Rundiz Events"
 msgstr ""
 
 #. Plugin URI of the plugin
-msgid "http://rundiz.com"
+msgid "https://rundiz.com/?p=319"
 msgstr ""
 
 #. Description of the plugin
@@ -28,6 +28,10 @@ msgstr ""
 
 #. Author of the plugin
 msgid "Vee Winch"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://rundiz.com"
 msgstr ""
 
 #. translators: %1$s: Current WordPress version, %2$s: Required WordPress version.
