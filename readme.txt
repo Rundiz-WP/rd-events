@@ -2,8 +2,8 @@
 Contributors: okvee
 Tags: events, meeting, plans, calendar
 Requires at least: 4.0
-Tested up to: 4.9.8
-Stable tag: 0.2.7
+Tested up to: 5.0
+Stable tag: 0.3
 Requires PHP: 5.5
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE
 License: MIT
@@ -51,6 +51,13 @@ Please ask your question in support section and add mention to @okvee.
 6. Screenshot of how it works on real website.
 
 == Changelog ==
+
+= 0.3 =
+2018-12-08
+
+* Add translation template file (.POT).
+* Add translate help text.
+* Tested with WordPress 5.0 but keep old editor for some reason.
 
 = 0.2.7 =
 2018-04-04

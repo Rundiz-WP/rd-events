@@ -1,10 +1,11 @@
 <?php
 /**
  * Plugin Name: Rundiz Events
- * Plugin URI: http://rundiz.com
+ * Plugin URI: https://rundiz.com/?p=319
  * Description: Manage your events and display in the calendar or list.
- * Version: 0.2.7
+ * Version: 0.3
  * Author: Vee Winch
+ * Author URI: http://rundiz.com
  * Author URI: 
  * License: MIT
  * License URI: http://opensource.org/licenses/MIT
@@ -21,7 +22,7 @@ if (!defined('RDEVENTS_FILE')) {
 }
 // Define this plugin version. Useful in enqueue scripts and styles.
 if (!defined('RDEVENTS_VERSION')) {
-    define('RDEVENTS_VERSION', '0.2.5');
+    define('RDEVENTS_VERSION', '0.3');
 }
 
 
@@ -36,7 +37,7 @@ unset($App);
 
 
 // include the functions file so people can easily use it in their template.
-require __DIR__ . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'utilities.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'utilities.php';
 
 
 // That's it. Everything is load and works inside the main App class.

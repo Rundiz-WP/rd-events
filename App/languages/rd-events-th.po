@@ -1,15 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rundiz Events\n"
-"POT-Creation-Date: 2017-05-11 11:56+0700\n"
-"PO-Revision-Date: 2017-05-11 11:58+0700\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rd-events\n"
+"POT-Creation-Date: 2018-12-08T15:24:42+07:00\n"
+"PO-Revision-Date: 2018-12-08 15:43+0700\n"
 "Last-Translator: Vee W.\n"
 "Language-Team: \n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -20,247 +21,259 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: ../vendor\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: ../App.php:37
-#, php-format
-msgid "Your WordPress version does not meet the requirement. (%s < %s)."
-msgstr "รุ่นเวิร์ดเพรสของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%s < %s)."
+#. Plugin Name of the plugin
+msgid "Rundiz Events"
+msgstr "Rundiz Events"
 
-#: ../App.php:42
-#, php-format
-msgid "Your PHP version does not meet the requirement. (%s < %s)."
-msgstr "รุ่น PHP ของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%s < %s)."
+#. Plugin URI of the plugin
+msgid "http://rundiz.com"
+msgstr ""
 
-#: ../Controllers/Admin/Events/EventsManagePosts.php:29
+#. Description of the plugin
+msgid "Manage your events and display in the calendar or list."
+msgstr "จัดการเหตุการณ์และแสดงมันบนด้านหน้าเว็บ."
+
+#. Author of the plugin
+msgid "Vee Winch"
+msgstr ""
+
+#. translators: %1$s: Current WordPress version, %2$s: Required WordPress version.
+#: \App\App.php:38
+msgid "Your WordPress version does not meet the requirement. (%1$s < %2$s)."
+msgstr "รุ่นเวิร์ดเพรสของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%1$s < %2$s)."
+
+#. translators: %1$s: Current PHP version, %2$s: Required PHP version.
+#: \App\App.php:44
+msgid "Your PHP version does not meet the requirement. (%1$s < %2$s)."
+msgstr "รุ่น PHP ของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%1$s < %2$s)."
+
+#: \App\Controllers\Admin\Events\EventsManagePosts.php:29
 msgid "Event date"
 msgstr "วันที่เหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsManagePosts.php:30
-#: ../Controllers/Front/Shortcodes/AvailableShortcodes.php:49
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:39 ../templates/single.php:40
+#: \App\Controllers\Admin\Events\EventsManagePosts.php:30
+#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:49 \App\templates\single.php:40
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventLocation_v.php:39
 msgid "Location"
 msgstr "สถานที่"
 
-#: ../Controllers/Admin/Events/EventsManagePosts.php:68
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:82
+#: \App\Controllers\Admin\Events\EventsManagePosts.php:68
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:82
 msgid "All day"
 msgstr "ทั้งวัน"
 
-#: ../Controllers/Admin/Events/EventsMetaboxes.php:30
+#: \App\Controllers\Admin\Events\EventsMetaboxes.php:30
 msgid "The field date on start and end are not exists."
 msgstr "ช่องวันที่เริ่มและสิ้นสุดไม่ปรากฏ."
 
-#: ../Controllers/Admin/Events/EventsMetaboxes.php:33
+#: \App\Controllers\Admin\Events\EventsMetaboxes.php:33
 msgid "The start date is incorrect date format."
 msgstr "รูปแบบวันที่เริ่มไม่ถูกต้อง."
 
-#: ../Controllers/Admin/Events/EventsMetaboxes.php:36
+#: \App\Controllers\Admin\Events\EventsMetaboxes.php:36
 msgid "The end date is incorrect date format."
 msgstr "รูปแบบวันที่สิ้นสุดไม่ถูกต้อง."
 
-#: ../Controllers/Admin/Events/EventsMetaboxes.php:39
+#: \App\Controllers\Admin\Events\EventsMetaboxes.php:39
 msgid "The selected end date must be after start date."
 msgstr "วันที่สิ้นสุดต้องอยู่หลังวันที่เริ่ม."
 
-#: ../Controllers/Admin/Events/EventsMetaboxes.php:42
+#: \App\Controllers\Admin\Events\EventsMetaboxes.php:42
 msgid "You had entered invalid time values."
 msgstr "คุณได้กรอกเวลาไม่ถูกต้อง."
 
-#: ../Controllers/Admin/Events/EventsMetaboxes.php:152
+#: \App\Controllers\Admin\Events\EventsMetaboxes.php:152
 msgid "Event Date"
 msgstr "วันที่เหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsMetaboxes.php:154
+#: \App\Controllers\Admin\Events\EventsMetaboxes.php:154
 msgid "Event Location"
 msgstr "สถานที่เหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:36
+#: \App\Controllers\Admin\Events\EventsPostType.php:36
 msgid "Events"
 msgstr "เหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:37
+#: \App\Controllers\Admin\Events\EventsPostType.php:37
 msgid "Event"
 msgstr "เหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:38
+#: \App\Controllers\Admin\Events\EventsPostType.php:38
 msgid "Add New Event"
 msgstr "เพิ่มเหตุการณ์ใหม่"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:39
+#: \App\Controllers\Admin\Events\EventsPostType.php:39
 msgid "Edit Event"
 msgstr "แก้ไขเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:40
+#: \App\Controllers\Admin\Events\EventsPostType.php:40
 msgid "New Event"
 msgstr "เหตุการณ์ใหม่"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:41
+#: \App\Controllers\Admin\Events\EventsPostType.php:41
 msgid "View Event"
 msgstr "ดูเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:42
+#: \App\Controllers\Admin\Events\EventsPostType.php:42
 msgid "View Events"
 msgstr "ดูเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:43
+#: \App\Controllers\Admin\Events\EventsPostType.php:43
 msgid "Search Events"
 msgstr "ค้นหาเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:44
+#: \App\Controllers\Admin\Events\EventsPostType.php:44
 msgid "No event found."
 msgstr "ไม่พบเหตุการณ์."
 
-#: ../Controllers/Admin/Events/EventsPostType.php:45
+#: \App\Controllers\Admin\Events\EventsPostType.php:45
 msgid "No event found in trash."
 msgstr "ไม่พบเหตุการณ์ในถังขยะ."
 
-#: ../Controllers/Admin/Events/EventsPostType.php:46
+#: \App\Controllers\Admin\Events\EventsPostType.php:46
 msgid "All Events"
 msgstr "เหตุการณ์ทั้งหมด"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:47
+#: \App\Controllers\Admin\Events\EventsPostType.php:47
 msgid "Event Archives"
 msgstr "คลังเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:48
+#: \App\Controllers\Admin\Events\EventsPostType.php:48
 msgid "Insert into event"
 msgstr "เพิ่มในเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:49
+#: \App\Controllers\Admin\Events\EventsPostType.php:49
 msgid "Upload to this event"
 msgstr "อัพโหลดไปยังเหตุการณ์นี้"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:50
+#: \App\Controllers\Admin\Events\EventsPostType.php:50
 msgid "Filter events list"
 msgstr "กรองรายการเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:51
+#: \App\Controllers\Admin\Events\EventsPostType.php:51
 msgid "Events list navigation"
 msgstr "นำทางรายการเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:52
+#: \App\Controllers\Admin\Events\EventsPostType.php:52
 msgid "Events list"
 msgstr "รายการเหตุการณ์"
 
-#: ../Controllers/Admin/Events/EventsPostType.php:57
+#: \App\Controllers\Admin\Events\EventsPostType.php:57
 msgid "Manage events and display it on front-end."
 msgstr "จัดการเหตุการณ์และแสดงมันบนด้านหน้าเว็บ."
 
-#: ../Controllers/Admin/PluginMetaAndLinks.php:32 ../Controllers/Admin/Settings.php:23
-msgid "Settings"
-msgstr "ตั้งค่า"
-
-#: ../Controllers/Admin/PluginMetaAndLinks.php:73
+#: \App\Controllers\Admin\PluginMetaAndLinks.php:73
 msgid "Donate"
 msgstr "บริจาค"
 
-#: ../Controllers/Admin/Settings.php:46
-msgid "You do not have permission to access this page."
-msgstr "คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้."
+#: \App\Controllers\Admin\Settings.php:23
+msgid "Settings"
+msgstr "ตั้งค่า"
 
-#: ../Controllers/Admin/Settings.php:64
-msgid "Settings saved."
-msgstr "บันทึกการตั้งค่าแล้ว."
-
-#: ../Controllers/Front/EnqueueStyleScript.php:47 ../Widgets/CalendarWidget.php:57
+#: \App\Controllers\Front\EnqueueStyleScript.php:47 \App\Widgets\CalendarWidget.php:57
 msgid "Day"
 msgstr "วัน"
 
-#: ../Controllers/Front/EnqueueStyleScript.php:48 ../Widgets/CalendarWidget.php:58
+#: \App\Controllers\Front\EnqueueStyleScript.php:48 \App\Widgets\CalendarWidget.php:58
 msgid "Week"
 msgstr "สัปดาห์"
 
-#: ../Controllers/Front/EnqueueStyleScript.php:49 ../Widgets/CalendarWidget.php:59
+#: \App\Controllers\Front\EnqueueStyleScript.php:49 \App\Widgets\CalendarWidget.php:59
 msgid "Month"
 msgstr "เดือน"
 
-#: ../Controllers/Front/EnqueueStyleScript.php:50 ../Widgets/CalendarWidget.php:60
+#: \App\Controllers\Front\EnqueueStyleScript.php:50 \App\Widgets\CalendarWidget.php:60
 msgid "Today"
 msgstr "วันนี้"
 
-#: ../Controllers/Front/Shortcodes/AvailableShortcodes.php:38 ../templates/single.php:28
+#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:38 \App\templates\single.php:28
 msgid "Event date/time"
 msgstr "วัน/เวลา เหตุการณ์"
 
-#: ../Controllers/Front/Shortcodes/AvailableShortcodes.php:41 ../templates/single.php:34
+#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:41 \App\templates\single.php:34
 msgid "All day event."
 msgstr "เหตุการณ์ทั้งวัน."
 
-#: ../Controllers/Front/Shortcodes/AvailableShortcodes.php:79 ../Widgets/CalendarWidget.php:152
-#: ../templates/archive.php:33
+#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:79 \App\templates\archive.php:33
+#: \App\Widgets\CalendarWidget.php:152 \example\archive-use-normal-code.php:16
 msgid "Getting events data"
 msgstr "กำลังดึงข้อมูลเหตุการณ์"
 
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:54
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:56
+#: \App\templates\single.php:50
+msgid "Not found"
+msgstr "ไม่พบ"
+
+#: \App\templates\single.php:51
+msgid "Nothing found."
+msgstr "ไม่พบอะไร."
+
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:54
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:56
 msgid "Event start"
 msgstr "เหตุการณ์เริ่ม"
 
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:58
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:70
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:58
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:70
 msgid "Date"
 msgstr "วันที่"
 
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:61
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:73
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:61
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:73
 msgid "Time"
 msgstr "เวลา"
 
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:66
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:68
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:66
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:68
 msgid "Event end"
 msgstr "เหตุการณ์สิ้นสุด"
 
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:37
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventLocation_v.php:37
 msgid "Enter address or click on the map below"
 msgstr "หรอกที่อยู่หรือคลิกบนแผนที่ด้านล่าง"
 
-#: ../Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:52
+#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventLocation_v.php:52
 msgid "Clear"
 msgstr "ล้างค่า"
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:2
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:2
 msgid "Rundiz Events settings"
 msgstr "ตั้งค่า Rundiz Events"
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:9
-msgid "Dismiss this notice."
-msgstr "รับทราบ."
-
-#: ../Views/Admin/Settings/settingsPageAction_v.php:19
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:19
 msgid "Google Map API Key"
 msgstr "รหัส API ของ Google Maps"
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:25
-#, php-format
-msgid "Go to %s and enable %s."
-msgstr "ไปยัง %s  และเปิดใช้งาน %s."
+#. translators: %1$s: Link to Google APIs manager, %2$s: Highlight Google Maps JS API text.
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:26
+msgid "Go to %1$s and enable %2$s."
+msgstr "ไปยัง %1$s  และเปิดใช้งาน %2$s."
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:26
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:27
 msgid "Google APIs Manager"
 msgstr ""
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:27
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:28
 msgid "Google Maps JavaScript API "
 msgstr ""
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:30
-#, php-format
+#. translators: %s: Credentials text.
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:32
 msgid "Go to %s and create API key and then copy the key to this input."
 msgstr "ไปยัง %s และสร้างรหัส API จากนั้นคัดลอกรหัสมาใส่ในช่องนี้."
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:31
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:33
 msgid "Credentials"
 msgstr ""
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:38
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:40
 msgid "Use Ajax events"
-msgstr ""
+msgstr "ใช้ Ajax"
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:42
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:44
 msgid "Check this to use Ajax to get events, otherwise it will render all events into js at once."
 msgstr "ติ๊กกล่องนี้เพื่อใช้ Ajax ในการดึงค่าเหตุการณ์ต่างๆ, หากไม่ติ๊กมันจะส่งค่าเหตุการณ์ทั้งหมดในทีเดียว."
 
-#: ../Views/Admin/Settings/settingsPageAction_v.php:46
+#: \App\Views\Admin\Settings\settingsPageAction_v.php:48
 msgid ""
 "If you want to reduce connection to server (such as ajax) or if you want to generate static HTML "
 "from WordPress, uncheck this box can help your front-end display events without any request to "
@@ -269,29 +282,29 @@ msgstr ""
 "ถ้าคุณต้องการลดการเชื่อมต่อไปยังเซิร์ฟเวอร์ (อย่างเช่น Ajax) หรือถ้าคุณต้องการสร้างเว็บแบบ HTML คงที่จากเวิร์ดเพรส, "
 "ไม่ติ๊กกล่องนี้จะช่วยให้หน้าเว็บของคุณแสดงเหตุการณ์โดยไม่ต้องดึงข้อมูลจากเซิร์ฟเวอร์."
 
-#: ../Widgets/CalendarWidget.php:27
+#: \App\Widgets\CalendarWidget.php:27
 msgid "Events Calendar"
 msgstr "ปฏิทินเหตุการณ์"
 
-#: ../Widgets/CalendarWidget.php:29
+#: \App\Widgets\CalendarWidget.php:29
 msgid "Display events in the calendar widget."
 msgstr "แสดงเหตุการณ์ในวิดเจ็ตปฏิทิน."
 
-#: ../Widgets/CalendarWidget.php:97
-msgid "Title"
-msgstr "ไตเติ้ล"
-
-#: ../Widgets/CalendarWidget.php:156
+#: \App\Widgets\CalendarWidget.php:156
 msgid "See more"
 msgstr "ดูเพิ่มเติม"
 
-#: ../templates/single.php:50
-msgid "Not found"
-msgstr "ไม่พบ"
+#~ msgid "You do not have permission to access this page."
+#~ msgstr "คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้."
 
-#: ../templates/single.php:51
-msgid "Nothing found."
-msgstr "ไม่พบอะไร."
+#~ msgid "Settings saved."
+#~ msgstr "บันทึกการตั้งค่าแล้ว."
+
+#~ msgid "Dismiss this notice."
+#~ msgstr "รับทราบ."
+
+#~ msgid "Title"
+#~ msgstr "ไตเติ้ล"
 
 #, fuzzy
 #~| msgid "Event Archives"
@@ -305,8 +318,8 @@ msgstr "ไม่พบอะไร."
 #~ "You are using PHP %s which does not meet minimum requirement. Please consider upgrade PHP "
 #~ "version or contact plugin author for this help.<br><br>Minimum requirement:<br>PHP %s"
 #~ msgstr ""
-#~ "คุณกำลังใช้ PHP %s ซึ่งไม่ตรงความต้องการขั้นต่ำ. กรุณาพิจารณาอัพเกรดรุ่น PHP "
-#~ "หรือติดต่อผู้เขียนปลั๊กอินเพื่อขอความช่วยเหลือ.<br><br>ความต้องการขั้นต่ำ:<br>PHP %s"
+#~ "คุณกำลังใช้ PHP %s ซึ่งไม่ตรงความต้องการขั้นต่ำ. กรุณาพิจารณาอัพเกรดรุ่น PHP หรือติดต่อผู้เขียนปลั๊กอินเพื่อขอความช่วยเหลือ."
+#~ "<br><br>ความต้องการขั้นต่ำ:<br>PHP %s"
 
 #~ msgid "Minimum requirement of PHP version does not meet."
 #~ msgstr "รุ่นของ PHP ไม่ตรงความต้องการขั้นต่ำ."
@@ -342,8 +355,7 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "กุญแจ API สำหรับยูทูปไม่ถูกต้อง"
 
 #~ msgid ""
-#~ "The administrator did not enter YouTube API key. Please enter YouTube API key from settings "
-#~ "page."
+#~ "The administrator did not enter YouTube API key. Please enter YouTube API key from settings page."
 #~ msgstr "ผู้ดูแลยังไม่ได้กรอกกุญแจ API สำหรับยูทูป. โปรดกรอกได้จากหน้าตั้งค่า"
 
 #~ msgid "Call to <code>%s</code>"
@@ -358,8 +370,8 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "ตอนนี้คุณสามารถใช้ตัวแปรนี้เพื่อเข้าถึงคีย์อะเรย์ของมันได้ทุกที่."
 
 #~ msgid ""
-#~ "Please visit <a href=\"https://console.developers.google.com/project\" target=\"_blank"
-#~ "\">Google Projects</a> and create or open your project by click on menu &gt; API Manager."
+#~ "Please visit <a href=\"https://console.developers.google.com/project\" target=\"_blank\">Google "
+#~ "Projects</a> and create or open your project by click on menu &gt; API Manager."
 #~ msgstr ""
 #~ "กรุณาไปที่ <a href=\"https://console.developers.google.com/project\" target=\"_blank\">Google "
 #~ "Projects</a> แล้วทำการสร้างหรือเปิดโปรเจ็คของคุณโดยคลิกบนเมนู &gt; API Manager."
@@ -372,8 +384,8 @@ msgstr "ไม่พบอะไร."
 #~ "Click on <strong>Create credentials</strong> then click <strong>API key</strong> and choose "
 #~ "<strong>Server key</strong>."
 #~ msgstr ""
-#~ "คลิกที่ <strong>Create credentials</strong> แล้วคลิก <strong>API key</strong> แล้วเลือก "
-#~ "<strong>Server key</strong>."
+#~ "คลิกที่ <strong>Create credentials</strong> แล้วคลิก <strong>API key</strong> แล้วเลือก <strong>Server "
+#~ "key</strong>."
 
 #~ msgid ""
 #~ "Enter your desired name and click on <strong>Create</strong>. You may add the<strong>Accept "
@@ -407,8 +419,8 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "พารามิเตอร์ของตัวเล่นฝังของยูทูป"
 
 #~ msgid ""
-#~ "You can change the player appearance and controls by setting in <strong>Video settings</"
-#~ "strong> tab."
+#~ "You can change the player appearance and controls by setting in <strong>Video settings</strong> "
+#~ "tab."
 #~ msgstr "คุณสามารถเปลี่ยนการแสดงผลตัวเล่นและการควบคุมโดยตั้งค่าในแท็บ <strong>ตั้งค่าวิดีโอ</strong>."
 
 #~ msgid ""
@@ -417,11 +429,11 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "อย่างไรก็ตาม, คุณสามารถเขียนทับค่าต่างๆเหล่านั้นโดยเพิ่มพารามิเตอร์ลงในช็อตโค้ด."
 
 #~ msgid ""
-#~ "Please refer to this <a href=\"https://developers.google.com/youtube/player_parameters\" "
-#~ "target=\"_blank\">document page</a>."
+#~ "Please refer to this <a href=\"https://developers.google.com/youtube/player_parameters\" target="
+#~ "\"_blank\">document page</a>."
 #~ msgstr ""
-#~ "โปรดอ้างอิงจาก <a href=\"https://developers.google.com/youtube/player_parameters\" target="
-#~ "\"_blank\">หน้าเอกสารนี้</a>."
+#~ "โปรดอ้างอิงจาก <a href=\"https://developers.google.com/youtube/player_parameters\" target=\"_blank"
+#~ "\">หน้าเอกสารนี้</a>."
 
 #~ msgid "For example: I will set the player to autoplay and do not auto hide video controls."
 #~ msgstr "ตัวอย่าง: ฉันจะกำหนดตัวเล่นให้เล่นอัตโนมัติและไม่ต้องซ่อนตัวควบคุมวิดีโอ."
@@ -448,8 +460,8 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "พารามิเตอร์รายการเล่นของยูทูป"
 
 #~ msgid ""
-#~ "Same as player parameters, please refer to this <a href=\"https://developers.google.com/"
-#~ "youtube/player_parameters\" target=\"_blank\">document page</a>."
+#~ "Same as player parameters, please refer to this <a href=\"https://developers.google.com/youtube/"
+#~ "player_parameters\" target=\"_blank\">document page</a>."
 #~ msgstr ""
 #~ "เหมือนกันกับพารามิเตอร์ของเครื่องเล่น, โปรดอ้างอิง<a href=\"https://developers.google.com/youtube/"
 #~ "player_parameters\" target=\"_blank\">หน้าเอกสารนี้</a>."
@@ -475,9 +487,8 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "โปรดแน่ใจว่าช็อตโค้ดไม่ได้เป็นลิ้ง HTML เพราะว่าเครื่องมือแก้ไข TinyMCE จะแปลงมันให้อัตโนมัติ."
 
 #~ msgid ""
-#~ "Do not use shift+enter to enter new line after shortcode because it can break the html "
-#~ "elements, use <code>&lt;div&gt;...&lt;/div&gt;</code> in editor's <strong>Text view</strong> "
-#~ "instead."
+#~ "Do not use shift+enter to enter new line after shortcode because it can break the html elements, "
+#~ "use <code>&lt;div&gt;...&lt;/div&gt;</code> in editor's <strong>Text view</strong> instead."
 #~ msgstr ""
 #~ "อย่าใช้ shift+enter เพื่อขึ้นบรรทัดใหม่หลังจากช็อตโค้ด เพราะว่ามันจะทำลาย HTML, ใช้ <code>&lt;div&gt;...&lt;/"
 #~ "div&gt;</code> ในเครื่องมือแก้ไขใน<strong>มุมมองตัวอักษร</strong>แทน."
@@ -512,8 +523,8 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "กุญแจ API ยูทูป"
 
 #~ msgid ""
-#~ "Show soft error message if there is no API key entered while using playlist shortcode or if "
-#~ "the API key is incorrect."
+#~ "Show soft error message if there is no API key entered while using playlist shortcode or if the "
+#~ "API key is incorrect."
 #~ msgstr "แสดงข้อความข้อผิดพลาดเล็กน้อยถ้าไม่มีกุญแจ API ในขณะที่ใช้รายการเช่นช็อตโค้ด หรือถ้ากุญแจ API ไม่ถูกต้อง."
 
 #~ msgid "Off"
@@ -562,8 +573,8 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "อนุญาตเต็มจอ"
 
 #~ msgid ""
-#~ "Set to <strong>on</strong> to closed captions to be shown, even if the user has turned "
-#~ "captions off. The default behavior is based on user preference."
+#~ "Set to <strong>on</strong> to closed captions to be shown, even if the user has turned captions "
+#~ "off. The default behavior is based on user preference."
 #~ msgstr "กำหนดเป็น <strong>เปิด</strong> เพื่อแสดงคำบรรยาย, แม้ว่าถ้าผู้ใช้ปิดแล้ว. ค่าเดิมคืออยู่บนการตั้งค่าของผู้ใช้."
 
 #~ msgid "Closed caption"
@@ -576,9 +587,9 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "แสดงข้อมูลวิดีโอ"
 
 #~ msgid ""
-#~ "This lets you use a YouTube player that does not show a YouTube logo. Note that a small "
-#~ "YouTube text label will still display in the upper-right corner of a paused video when the "
-#~ "user's mouse pointer hovers over the player. "
+#~ "This lets you use a YouTube player that does not show a YouTube logo. Note that a small YouTube "
+#~ "text label will still display in the upper-right corner of a paused video when the user's mouse "
+#~ "pointer hovers over the player. "
 #~ msgstr ""
 #~ "นี้จะอนุญาตให้คุณใช้เครื่องเล่นยูทูปโดยไม่แสดงยูทูปโลโก้. "
 #~ "โปรดทราบว่าข้อความยูทูปเล็กๆจะแสดงด้านบนขวาเมื่อหยุดเล่นวิดีโอชั่วคราวและเมาส์ชี้อยู่เหนือเครื่องเล่นนั้น."
@@ -588,12 +599,11 @@ msgstr "ไม่พบอะไร."
 
 #~ msgid ""
 #~ "Sets the player's interface language. The parameter value is an <a href=\"http://www.loc.gov/"
-#~ "standards/iso639-2/php/code_list.php\" target=\"_blank\">ISO 639-1 two-letter language code</"
-#~ "a> or a fully specified locale. For example, fr and fr-ca are both valid values."
+#~ "standards/iso639-2/php/code_list.php\" target=\"_blank\">ISO 639-1 two-letter language code</a> "
+#~ "or a fully specified locale. For example, fr and fr-ca are both valid values."
 #~ msgstr ""
-#~ "กำหนดภาษาของตัวเล่นวิดีโอ. ค่าที่กำหนดเป็น <a href=\"http://www.loc.gov/standards/iso639-2/php/"
-#~ "code_list.php\" target=\"_blank\">ISO 639-1 รหัส 2 ตัวอักษร</a> หรือชื่อภาษา. ตัวอย่าง fr และ fr-ca "
-#~ "มีค่าเท่ากัน."
+#~ "กำหนดภาษาของตัวเล่นวิดีโอ. ค่าที่กำหนดเป็น <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list."
+#~ "php\" target=\"_blank\">ISO 639-1 รหัส 2 ตัวอักษร</a> หรือชื่อภาษา. ตัวอย่าง fr และ fr-ca มีค่าเท่ากัน."
 
 #~ msgid "Interface language"
 #~ msgstr "ภาษาตัวเล่นวิดีโอ"
@@ -620,9 +630,9 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "ตัวควบคุมการเล่น"
 
 #~ msgid ""
-#~ "Specifies the color that will be used in the player's video progress bar to highlight the "
-#~ "amount of the video that the viewer has already seen. Setting the color parameter to white "
-#~ "will disable hide YouTube logo option."
+#~ "Specifies the color that will be used in the player's video progress bar to highlight the amount "
+#~ "of the video that the viewer has already seen. Setting the color parameter to white will disable "
+#~ "hide YouTube logo option."
 #~ msgstr ""
 #~ "กำหนดสีของสถานะการเล่นเพื่อแสดงวิดีโอที่เล่นไปแล้วเป็นความยาวเท่าใด. กำหนดสีเป็นสีขาวจะปิดใช้งานซ่อนการแสดงโลโก้ "
 #~ "YouTube."
@@ -666,18 +676,18 @@ msgstr "ไม่พบอะไร."
 #~ msgstr "ความช่วยเหลือช็อตโค้ด"
 
 #~ msgid ""
-#~ "Set to <strong>on</strong> to closed captions to be shownt, even if the user has turned "
-#~ "captions off. The default behavior is based on user preference."
+#~ "Set to <strong>on</strong> to closed captions to be shownt, even if the user has turned captions "
+#~ "off. The default behavior is based on user preference."
 #~ msgstr "กำหนดเป็น <strong>เปิด</strong> เพื่อปิดคำบรรยาย"
 
 #~ msgid ""
-#~ "Set to on to closed captions to be shownt, even if the user has turned captions off. The "
-#~ "default behavior is based on user preference."
+#~ "Set to on to closed captions to be shownt, even if the user has turned captions off. The default "
+#~ "behavior is based on user preference."
 #~ msgstr "กำหนด"
 
 #~ msgid ""
-#~ "Please visit <a href=\"https://console.developers.google.com/project\" target=\"_blank"
-#~ "\">Google Projects</a> and create or open your project."
+#~ "Please visit <a href=\"https://console.developers.google.com/project\" target=\"_blank\">Google "
+#~ "Projects</a> and create or open your project."
 #~ msgstr ""
 #~ "โปรดไปที่ <a href=\"https://console.developers.google.com/project\" target=\"_blank\">Google "
 #~ "Projects</a> และสร้างหรือเปิดโปรเจ็คของคุณ."

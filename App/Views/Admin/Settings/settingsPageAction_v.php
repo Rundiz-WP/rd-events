@@ -22,11 +22,13 @@
                         <p class="description">
                             <?php 
                             echo sprintf(
-                                __('Go to %s and enable %s.', 'rd-events'), 
+                                /* translators: %1$s: Link to Google APIs manager, %2$s: Highlight Google Maps JS API text. */
+                                __('Go to %1$s and enable %2$s.', 'rd-events'), 
                                 '<a href="https://console.developers.google.com/apis/library" target="googleapis">' . __('Google APIs Manager', 'rd-events') . '</a>',
                                 '<strong>' . __('Google Maps JavaScript API ', 'rd-events') . '</strong>'
                             ) . '<br>'; 
                             echo sprintf(
+                                /* translators: %s: Credentials text. */
                                 __('Go to %s and create API key and then copy the key to this input.', 'rd-events'),
                                 '<strong>' . __('Credentials', 'rd-events') . '</strong>'
                             );

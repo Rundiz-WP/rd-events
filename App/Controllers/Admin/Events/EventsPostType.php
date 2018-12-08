@@ -59,6 +59,12 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsPostType')
                 'exclude_from_search' => false,
                 'show_in_menu' => true,
                 'show_in_admin_bar' => false,
+
+                // make new editor support in WordPress 5 (Gutenberg).
+                //'show_in_rest' => true,
+                // Skip this for now and wait until WordPress completely drop TinyMCE because old editor is a lot easier to understand.
+                // required WP 4.7.
+
                 'menu_position' => 26,
                 'menu_icon' => 'dashicons-calendar-alt',
                 'supports' => ['title', 'editor', 'comments', 'author', 'thumbnail'],
