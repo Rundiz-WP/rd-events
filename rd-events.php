@@ -6,7 +6,6 @@
  * Version: 0.3
  * Author: Vee Winch
  * Author URI: http://rundiz.com
- * Author URI: 
  * License: MIT
  * License URI: http://opensource.org/licenses/MIT
  * Text Domain: rd-events

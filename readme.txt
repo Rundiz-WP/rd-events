@@ -1,11 +1,11 @@
 === Rundiz Events ===
 Contributors: okvee
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE
 Tags: events, meeting, plans, calendar
 Requires at least: 4.0
-Tested up to: 5.0
+Tested up to: 5.0.3
 Stable tag: 0.3
 Requires PHP: 5.5
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -92,6 +92,3 @@ Please ask your question in support section and add mention to @okvee.
 2017-04-05
 
 * The beginning.
-
-== Upgrade Notice ==
-
