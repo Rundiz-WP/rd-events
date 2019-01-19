@@ -2,7 +2,7 @@
 Contributors: okvee
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE
 Tags: events, meeting, plans, calendar
-Requires at least: 4.0
+Requires at least: 4.6.0
 Tested up to: 5.0.3
 Stable tag: 0.3
 Requires PHP: 5.5
@@ -18,7 +18,7 @@ This is not include the ticket system or any commerce system, it is just for dis
 
 = System requirement =
 PHP 5.5 or higher<br>
-WordPress 4.0 or higher
+WordPress 4.6.0 or higher
 
 == Installation ==
 1. Upload "rd-events" folder to the "/wp-content/plugins/" directory.
