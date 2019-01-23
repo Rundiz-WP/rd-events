@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Vee Winch
+# Copyright (C) 2019 Vee Winch
 # This file is distributed under the same license as the Rundiz Events plugin.
 msgid ""
 msgstr ""
@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-12-08T16:35:27+07:00\n"
-"PO-Revision-Date: 2018-12-08T16:35:27+07:00\n"
-"X-Generator: WP-CLI 2.0.1\n"
+"POT-Creation-Date: 2019-01-23T13:00:45+07:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
 "X-Domain: rd-events\n"
 
 #. Plugin Name of the plugin
@@ -35,262 +35,262 @@ msgid "http://rundiz.com"
 msgstr ""
 
 #. translators: %1$s: Current WordPress version, %2$s: Required WordPress version.
-#: \App\App.php:38
+#: App/App.php:38
 msgid "Your WordPress version does not meet the requirement. (%1$s < %2$s)."
 msgstr ""
 
 #. translators: %1$s: Current PHP version, %2$s: Required PHP version.
-#: \App\App.php:44
+#: App/App.php:44
 msgid "Your PHP version does not meet the requirement. (%1$s < %2$s)."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsManagePosts.php:29
+#: App/Controllers/Admin/Events/EventsManagePosts.php:29
 msgid "Event date"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsManagePosts.php:30
-#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:49
-#: \App\templates\single.php:40
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventLocation_v.php:39
+#: App/Controllers/Admin/Events/EventsManagePosts.php:30
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:49
+#: App/templates/single.php:40
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:39
 msgid "Location"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsManagePosts.php:68
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:82
+#: App/Controllers/Admin/Events/EventsManagePosts.php:68
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:82
 msgid "All day"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsMetaboxes.php:30
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:30
 msgid "The field date on start and end are not exists."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsMetaboxes.php:33
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:33
 msgid "The start date is incorrect date format."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsMetaboxes.php:36
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:36
 msgid "The end date is incorrect date format."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsMetaboxes.php:39
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:39
 msgid "The selected end date must be after start date."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsMetaboxes.php:42
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:42
 msgid "You had entered invalid time values."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsMetaboxes.php:152
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:152
 msgid "Event Date"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsMetaboxes.php:154
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:154
 msgid "Event Location"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:36
+#: App/Controllers/Admin/Events/EventsPostType.php:36
 msgid "Events"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:37
+#: App/Controllers/Admin/Events/EventsPostType.php:37
 msgid "Event"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:38
+#: App/Controllers/Admin/Events/EventsPostType.php:38
 msgid "Add New Event"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:39
+#: App/Controllers/Admin/Events/EventsPostType.php:39
 msgid "Edit Event"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:40
+#: App/Controllers/Admin/Events/EventsPostType.php:40
 msgid "New Event"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:41
+#: App/Controllers/Admin/Events/EventsPostType.php:41
 msgid "View Event"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:42
+#: App/Controllers/Admin/Events/EventsPostType.php:42
 msgid "View Events"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:43
+#: App/Controllers/Admin/Events/EventsPostType.php:43
 msgid "Search Events"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:44
+#: App/Controllers/Admin/Events/EventsPostType.php:44
 msgid "No event found."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:45
+#: App/Controllers/Admin/Events/EventsPostType.php:45
 msgid "No event found in trash."
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:46
+#: App/Controllers/Admin/Events/EventsPostType.php:46
 msgid "All Events"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:47
+#: App/Controllers/Admin/Events/EventsPostType.php:47
 msgid "Event Archives"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:48
+#: App/Controllers/Admin/Events/EventsPostType.php:48
 msgid "Insert into event"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:49
+#: App/Controllers/Admin/Events/EventsPostType.php:49
 msgid "Upload to this event"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:50
+#: App/Controllers/Admin/Events/EventsPostType.php:50
 msgid "Filter events list"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:51
+#: App/Controllers/Admin/Events/EventsPostType.php:51
 msgid "Events list navigation"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:52
+#: App/Controllers/Admin/Events/EventsPostType.php:52
 msgid "Events list"
 msgstr ""
 
-#: \App\Controllers\Admin\Events\EventsPostType.php:57
+#: App/Controllers/Admin/Events/EventsPostType.php:57
 msgid "Manage events and display it on front-end."
 msgstr ""
 
-#: \App\Controllers\Admin\PluginMetaAndLinks.php:73
+#: App/Controllers/Admin/PluginMetaAndLinks.php:73
 msgid "Donate"
 msgstr ""
 
-#: \App\Controllers\Admin\Settings.php:23
+#: App/Controllers/Admin/Settings.php:23
 msgid "Settings"
 msgstr ""
 
-#: \App\Controllers\Front\EnqueueStyleScript.php:47
-#: \App\Widgets\CalendarWidget.php:57
+#: App/Controllers/Front/EnqueueStyleScript.php:47
+#: App/Widgets/CalendarWidget.php:57
 msgid "Day"
 msgstr ""
 
-#: \App\Controllers\Front\EnqueueStyleScript.php:48
-#: \App\Widgets\CalendarWidget.php:58
+#: App/Controllers/Front/EnqueueStyleScript.php:48
+#: App/Widgets/CalendarWidget.php:58
 msgid "Week"
 msgstr ""
 
-#: \App\Controllers\Front\EnqueueStyleScript.php:49
-#: \App\Widgets\CalendarWidget.php:59
+#: App/Controllers/Front/EnqueueStyleScript.php:49
+#: App/Widgets/CalendarWidget.php:59
 msgid "Month"
 msgstr ""
 
-#: \App\Controllers\Front\EnqueueStyleScript.php:50
-#: \App\Widgets\CalendarWidget.php:60
+#: App/Controllers/Front/EnqueueStyleScript.php:50
+#: App/Widgets/CalendarWidget.php:60
 msgid "Today"
 msgstr ""
 
-#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:38
-#: \App\templates\single.php:28
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:38
+#: App/templates/single.php:28
 msgid "Event date/time"
 msgstr ""
 
-#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:41
-#: \App\templates\single.php:34
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:41
+#: App/templates/single.php:34
 msgid "All day event."
 msgstr ""
 
-#: \App\Controllers\Front\Shortcodes\AvailableShortcodes.php:79
-#: \App\templates\archive.php:33
-#: \App\Widgets\CalendarWidget.php:152
-#: \example\archive-use-normal-code.php:16
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:79
+#: App/templates/archive.php:33
+#: App/Widgets/CalendarWidget.php:152
+#: example/archive-use-normal-code.php:16
 msgid "Getting events data"
 msgstr ""
 
-#: \App\templates\single.php:50
+#: App/templates/single.php:50
 msgid "Not found"
 msgstr ""
 
-#: \App\templates\single.php:51
+#: App/templates/single.php:51
 msgid "Nothing found."
 msgstr ""
 
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:54
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:56
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:54
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:56
 msgid "Event start"
 msgstr ""
 
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:58
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:70
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:58
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:70
 msgid "Date"
 msgstr ""
 
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:61
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:73
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:61
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:73
 msgid "Time"
 msgstr ""
 
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:66
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventDate_v.php:68
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:66
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:68
 msgid "Event end"
 msgstr ""
 
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventLocation_v.php:37
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:37
 msgid "Enter address or click on the map below"
 msgstr ""
 
-#: \App\Views\Admin\Events\EventsMetaboxes\metaboxEventLocation_v.php:52
+#: App/Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:52
 msgid "Clear"
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:2
+#: App/Views/Admin/Settings/settingsPageAction_v.php:2
 msgid "Rundiz Events settings"
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:19
+#: App/Views/Admin/Settings/settingsPageAction_v.php:19
 msgid "Google Map API Key"
 msgstr ""
 
 #. translators: %1$s: Link to Google APIs manager, %2$s: Highlight Google Maps JS API text.
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:26
+#: App/Views/Admin/Settings/settingsPageAction_v.php:26
 msgid "Go to %1$s and enable %2$s."
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:27
+#: App/Views/Admin/Settings/settingsPageAction_v.php:27
 msgid "Google APIs Manager"
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:28
+#: App/Views/Admin/Settings/settingsPageAction_v.php:28
 msgid "Google Maps JavaScript API "
 msgstr ""
 
 #. translators: %s: Credentials text.
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:32
+#: App/Views/Admin/Settings/settingsPageAction_v.php:32
 msgid "Go to %s and create API key and then copy the key to this input."
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:33
+#: App/Views/Admin/Settings/settingsPageAction_v.php:33
 msgid "Credentials"
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:40
+#: App/Views/Admin/Settings/settingsPageAction_v.php:40
 msgid "Use Ajax events"
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:44
+#: App/Views/Admin/Settings/settingsPageAction_v.php:44
 msgid "Check this to use Ajax to get events, otherwise it will render all events into js at once."
 msgstr ""
 
-#: \App\Views\Admin\Settings\settingsPageAction_v.php:48
+#: App/Views/Admin/Settings/settingsPageAction_v.php:48
 msgid "If you want to reduce connection to server (such as ajax) or if you want to generate static HTML from WordPress, uncheck this box can help your front-end display events without any request to server."
 msgstr ""
 
-#: \App\Widgets\CalendarWidget.php:27
+#: App/Widgets/CalendarWidget.php:27
 msgid "Events Calendar"
 msgstr ""
 
-#: \App\Widgets\CalendarWidget.php:29
+#: App/Widgets/CalendarWidget.php:29
 msgid "Display events in the calendar widget."
 msgstr ""
 
-#: \App\Widgets\CalendarWidget.php:156
+#: App/Widgets/CalendarWidget.php:156
 msgid "See more"
 msgstr ""
