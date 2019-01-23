@@ -16,7 +16,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
 
         /**
          * Display notice if there is error.
-         * 
+         *
          * @access protected Do not access this method directly. It is for callback only.
          */
         public function adminNotices()
@@ -55,7 +55,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
 
         /**
          * Enqueue scripts and styles
-         * 
+         *
          * @access protected Do not access this method directly. It is for callback only.
          * @global \WP_Post $post The WP_Post class.
          * @param string $hook_suffix The current admin page.
@@ -65,8 +65,8 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
             global $post;
 
             if (
-                isset($post->post_type) && 
-                $post->post_type == $this->post_type && 
+                isset($post->post_type) &&
+                $post->post_type == $this->post_type &&
                 (
                     'post.php' === $hook_suffix ||
                     'post-new.php' === $hook_suffix
@@ -80,15 +80,15 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                 unset($options);
 
                 // enqueue css
-                wp_enqueue_style('jquery-ui', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/jquery-ui/jquery-ui.min.css', [], '1.11.4');
-                wp_enqueue_style('jquery-ui-timepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/admin/jquery.ui.timepicker.css', ['jquery-ui'], '0.3.3');
-                wp_enqueue_style('rd-events-admin', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/admin/rd-events.css', ['jquery-ui'], RDEVENTS_VERSION);
+                wp_enqueue_style('rd-events-jquery-ui', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/jquery-ui/jquery-ui.min.css', [], '1.11.4');
+                wp_enqueue_style('rd-events-jquery-ui-timepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/admin/jquery.ui.timepicker.css', ['rd-events-jquery-ui'], '0.3.3');
+                wp_enqueue_style('rd-events-admin', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/admin/rd-events.css', ['rd-events-jquery-ui'], RDEVENTS_VERSION);
 
                 // enqueue js
-                wp_enqueue_script('jquery-ui-timepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/jquery.ui.timepicker.js', ['jquery', 'jquery-ui-core'], '0.3.3', true);
-                wp_enqueue_script('rd-events-datepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/rd-events-datepicker.js', ['jquery', 'jquery-ui-datepicker', 'jquery-ui-timepicker'], RDEVENTS_VERSION, true);
+                wp_enqueue_script('rd-events-jquery-ui-timepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/jquery.ui.timepicker.js', ['jquery', 'jquery-ui-core'], '0.3.3', true);
+                wp_enqueue_script('rd-events-datepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/rd-events-datepicker.js', ['jquery', 'jquery-ui-datepicker', 'rd-events-jquery-ui-timepicker'], RDEVENTS_VERSION, true);
                 wp_enqueue_script('rd-events-map', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/rd-events-map.js', ['jquery'], RDEVENTS_VERSION, true);
-                wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?key=' . $googlemap_api . '&libraries=places&callback=rdEventsInitMap', [], false, true);
+                wp_enqueue_script('rd-events-google-map', 'https://maps.googleapis.com/maps/api/js?key=' . $googlemap_api . '&libraries=places&callback=rdEventsInitMap', [], false, true);
 
                 unset($googlemap_api);
             }
@@ -97,7 +97,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
 
         /**
          * Display event date metabox.
-         * 
+         *
          * @access protected Do not access this method directly. It is for callback only.
          * @param \WP_Post $post Current post object.
          */
@@ -111,7 +111,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
 
         /**
          * Display event map location metabox.
-         * 
+         *
          * @access protected Do not access this method directly. It is for callback only.
          * @param \WP_Post $post Current post object.
          */
@@ -142,7 +142,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
 
         /**
          * Register metabox(es).
-         * 
+         *
          * @access protected Do not access this method directly. It is for callback only.
          * @link https://developer.wordpress.org/reference/functions/add_meta_box/ Reference for <code>add_meta_box()</code> function.
          */
@@ -199,7 +199,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                             isset($_POST['_event_time_allday']) &&
                             $_POST['_event_time_allday'] != '1'
                         )
-                    ) && 
+                    ) &&
                     (
                         !isset($_POST['_event_time_start']) ||
                         !isset($_POST['_event_time_end'])

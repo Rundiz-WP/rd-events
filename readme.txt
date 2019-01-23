@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: events, meeting, plans, calendar
 Requires at least: 4.6.0
 Tested up to: 5.0.3
-Stable tag: 0.3
+Stable tag: 1.0
 Requires PHP: 5.5
 License: MIT
 License URI: http://opensource.org/licenses/MIT
@@ -52,43 +52,10 @@ Please ask your question in support section and add mention to @okvee.
 
 == Changelog ==
 
-= 0.3 =
-2018-12-08
+= 1.0 =
+2019-01-23
 
-* Add translation template file (.POT).
-* Add translate help text.
-* Tested with WordPress 5.0 but keep old editor for some reason.
-
-= 0.2.7 =
-2018-04-04
-
-* Fix add `wp_reset_postdata()` after use `\WP_Query` class.
-
-= 0.2.6 =
-2018-03-10
-
-* Fix not compatible with PHP 7.2.
-* Fix calendar not load events if there is no widget active.
-* Fix js undefined value.
-
-= 0.2.4 =
-* Add some hook for future use. This cannot work if it is just in the next update, it must stay in current update and then next update will work.
-
-= 0.2.3 =
-* Add setting to not use ajax (get all events at once on page load).
-
-= 0.2.2 =
-* Fix to allow quick edit.
-
-= 0.2.1 =
-* Add lang parameter while ajax get data to support polylang.
-
-= 0.2 =
-2017-04-11
-
-* Fix error on activate.
-
-= 0.1 =
-2017-04-05
-
-* The beginning.
+* Update required at least (WordPress).
+* Update translation.
+* Update asset handle name to be more specific. This is for prevent conflict with other plugins, themes that use the same name but different version.
+* Move previous change log to changelog.md.

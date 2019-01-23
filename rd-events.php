@@ -3,14 +3,14 @@
  * Plugin Name: Rundiz Events
  * Plugin URI: https://rundiz.com/?p=319
  * Description: Manage your events and display in the calendar or list.
- * Version: 0.3
+ * Version: 1.0
  * Author: Vee Winch
  * Author URI: http://rundiz.com
  * License: MIT
  * License URI: http://opensource.org/licenses/MIT
  * Text Domain: rd-events
  * Domain Path: /App/languages/
- * 
+ *
  * @package rundiz-events
  */
 
