@@ -29,7 +29,7 @@ if (!class_exists('\\RdEvents\\App\\App')) {
          */
         private function checkRequirement()
         {
-            $wordpress_required_version = '4.0';
+            $wordpress_required_version = '4.6';
             $php_required_version = '5.5';
             $php_version = (defined('PHP_VERSION') ? PHP_VERSION : (function_exists('phpversion') ? phpversion() : '4'));
 

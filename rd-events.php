@@ -3,7 +3,7 @@
  * Plugin Name: Rundiz Events
  * Plugin URI: https://rundiz.com/?p=319
  * Description: Manage your events and display in the calendar or list.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Vee Winch
  * Author URI: http://rundiz.com
  * License: MIT

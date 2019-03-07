@@ -3,8 +3,8 @@ Contributors: okvee
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE
 Tags: events, meeting, plans, calendar
 Requires at least: 4.6.0
-Tested up to: 5.0.3
-Stable tag: 1.0
+Tested up to: 5.1
+Stable tag: 1.0.1
 Requires PHP: 5.5
 License: MIT
 License URI: http://opensource.org/licenses/MIT
@@ -51,6 +51,12 @@ Please ask your question in support section and add mention to @okvee.
 6. Screenshot of how it works on real website.
 
 == Changelog ==
+
+= 1.0.1 =
+2019-03-07
+
+* Fix CSS for admin form.
+* Fix JS for front-end.
 
 = 1.0 =
 2019-01-23

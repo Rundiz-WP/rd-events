@@ -15,6 +15,13 @@ function rdEventsInitMap(map_id) {
     var rdevents_default_location_bangkok = {lat: 13.736717, lng: 100.523186};
     var rdevents_map_html = document.getElementById(map_id);
     var rdevents_map_zoom = 12;
+
+    if (typeof(rdevents_map_html) === 'undefined' || rdevents_map_html === null || rdevents_map_html === '') {
+        // if no map showup, no more works here.
+        console.log('no maps here.');
+        return ;
+    }
+
     if (
         typeof(rdevents_map_html) !== 'undefined' &&
         typeof(rdevents_map_html.dataset) !== 'undefined' &&
