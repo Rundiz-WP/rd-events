@@ -4,6 +4,8 @@
  * Plugin URI: https://rundiz.com/?p=319
  * Description: Manage your events and display in the calendar or list.
  * Version: 1.0.1
+ * Requires at least: 4.6.0
+ * Requires PHP: 5.5
  * Author: Vee Winch
  * Author URI: http://rundiz.com
  * License: MIT

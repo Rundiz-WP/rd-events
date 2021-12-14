@@ -1,13 +1,12 @@
 === Rundiz Events ===
 Contributors: okvee
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE
 Tags: events, meeting, plans, calendar
-Requires at least: 4.6.0
-Tested up to: 5.1
+Tested up to: 5.8.2
 Stable tag: 1.0.1
-Requires PHP: 5.5
 License: MIT
 License URI: http://opensource.org/licenses/MIT
+Requires at least: 4.6.0
+Requires PHP: 5.5
 
 Manage your events and display in the calendar or list.
 
