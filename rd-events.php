@@ -21,9 +21,14 @@
 if (!defined('RDEVENTS_FILE')) {
     define('RDEVENTS_FILE', __FILE__);
 }
+
 // Define this plugin version. Useful in enqueue scripts and styles.
 if (!defined('RDEVENTS_VERSION')) {
-    define('RDEVENTS_VERSION', '0.3');
+    $pluginData = (function_exists('get_file_data') ? get_file_data(__FILE__, ['Version' => 'Version']) : null);
+    $pluginVersion = (isset($pluginData['Version']) ? $pluginData['Version'] : gmdate('Ym'));
+    unset($pluginData);
+    define('RDEVENTS_VERSION', $pluginVersion);
+    unset($pluginVersion);
 }
 
 
@@ -35,10 +40,3 @@ require __DIR__ . DIRECTORY_SEPARATOR . 'autoload.php';
 $App = new \RdEvents\App\App();
 $App->run();
 unset($App);
-
-
-// include the functions file so people can easily use it in their template.
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'utilities.php';
-
-
-// That's it. Everything is load and works inside the main App class.

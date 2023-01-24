@@ -2,7 +2,7 @@
 /**
  * The main application file for this plugin.
  * 
- * @author Vee W.
+ * @package rundiz-events
  * @license http://opensource.org/licenses/MIT MIT
  */
 
@@ -22,34 +22,6 @@ if (!class_exists('\\RdEvents\\App\\App')) {
 
 
         /**
-         * Check system requirement.<br>
-         * Example: WordPress version, PHP version.
-         * 
-         * @throws Exception Throw exception on failed validation.
-         */
-        private function checkRequirement()
-        {
-            $wordpress_required_version = '4.6';
-            $php_required_version = '5.5';
-            $php_version = (defined('PHP_VERSION') ? PHP_VERSION : (function_exists('phpversion') ? phpversion() : '4'));
-
-            if (version_compare(get_bloginfo('version'), $wordpress_required_version, '<')) {
-                /* translators: %1$s: Current WordPress version, %2$s: Required WordPress version. */
-                $error_message = sprintf(__('Your WordPress version does not meet the requirement. (%1$s < %2$s).', 'rd-events'), get_bloginfo('version'), $wordpress_required_version);
-                throw new \Exception($error_message);
-            }
-
-            if (version_compare($php_version, $php_required_version, '<')) {
-                /* translators: %1$s: Current PHP version, %2$s: Required PHP version. */
-                $error_message = sprintf(__('Your PHP version does not meet the requirement. (%1$s < %2$s).', 'rd-events'), $php_version, $php_required_version);
-                throw new \Exception($error_message);
-            }
-
-            unset($error_message, $php_required_version, $php_version, $wordpress_required_version);
-        }// checkRequirement
-
-
-        /**
          * load text domain. (language files)
          */
         public function loadLanguage()
@@ -63,10 +35,10 @@ if (!class_exists('\\RdEvents\\App\\App')) {
          */
         public function run()
         {
-            // Check system requirement.
-            $this->checkRequirement();
+            // include the functions file so developers can easily use it in their template.
+            require_once __DIR__ . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'utilities.php';
 
-            add_action('plugins_loaded', function() {
+            add_action('plugins_loaded', function () {
                 // @link https://codex.wordpress.org/Function_Reference/load_plugin_textdomain Reference.
                 // load language of this plugin.
                 $this->loadLanguage();
