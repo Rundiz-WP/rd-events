@@ -1,4 +1,9 @@
 <?php
+/**
+ * Deactivation.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Admin;

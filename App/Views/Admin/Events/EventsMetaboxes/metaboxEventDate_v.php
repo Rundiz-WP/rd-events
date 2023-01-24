@@ -36,7 +36,7 @@ if (isset($post->ID)) {
             if (is_array($post_metas['_event_time_allday'])) {
                 $event_time_allday = $post_metas['_event_time_allday'][0];
             }
-            if ($event_time_allday !== '1' && $event_time_allday !== '0') {
+            if ('1' !== $event_time_allday && '0' !== $event_time_allday) {
                 $event_time_allday = '0';
             }
         }
@@ -57,7 +57,7 @@ wp_nonce_field(plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker', plugin_bas
             <label class="rd-events-date-input" for="rd-events-date-start">
                 <?php _e('Date', 'rd-events'); ?> <input id="rd-events-date-start" class="rd-events-datetime-input rd-events-date-field" type="date" name="_event_date_start" value="<?php echo $event_date_start; ?>" required="required" autocomplete="off">
             </label>
-            <label class="rd-events-time-input<?php if (isset($event_time_allday) && $event_time_allday === '1') {echo ' hidden';} ?>" for="rd-events-time-start">
+            <label class="rd-events-time-input<?php if (isset($event_time_allday) && '1' === $event_time_allday) {echo ' hidden';} ?>" for="rd-events-time-start">
                 <?php _e('Time', 'rd-events'); ?> <input id="rd-events-time-start" class="rd-events-datetime-input rd-events-time-field" type="time" name="_event_time_start" value="<?php echo $event_time_start; ?>">
             </label>
         </fieldset>
@@ -69,7 +69,7 @@ wp_nonce_field(plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker', plugin_bas
             <label class="rd-events-date-input" for="rd-events-date-end">
                 <?php _e('Date', 'rd-events'); ?> <input id="rd-events-date-end" class="rd-events-datetime-input rd-events-date-field" type="date" name="_event_date_end" value="<?php echo $event_date_end; ?>" required="required" autocomplete="off">
             </label>
-            <label class="rd-events-time-input<?php if (isset($event_time_allday) && $event_time_allday === '1') {echo ' hidden';} ?>" for="rd-events-time-end">
+            <label class="rd-events-time-input<?php if (isset($event_time_allday) && '1' === $event_time_allday) {echo ' hidden';} ?>" for="rd-events-time-end">
                 <?php _e('Time', 'rd-events'); ?> <input id="rd-events-time-end" class="rd-events-datetime-input rd-events-time-field" type="time" name="_event_time_end" value="<?php echo $event_time_end; ?>">
             </label>
         </fieldset>
@@ -78,7 +78,7 @@ wp_nonce_field(plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker', plugin_bas
 
 <p>
     <label for="rd-events-time-allday">
-        <input id="rd-events-time-allday" type="checkbox" name="_event_time_allday" value="1"<?php if (isset($event_time_allday) && $event_time_allday === '1') {echo ' checked="checked"';} ?>>
+        <input id="rd-events-time-allday" type="checkbox" name="_event_time_allday" value="1"<?php if (isset($event_time_allday) && '1' === $event_time_allday) {echo ' checked="checked"';} ?>>
         <?php _e('All day', 'rd-events'); ?> 
     </label>
 </p>

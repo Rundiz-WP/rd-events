@@ -1,4 +1,9 @@
 <?php
+/**
+ * Plugin settings page and functional.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Admin;
@@ -50,18 +55,18 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Settings')) {
 
             if ($_POST) {
                 // if form submitted.
-                if (!wp_verify_nonce((isset($_POST['_wpnonce']) ? $_POST['_wpnonce'] : ''))) {
+                if (!wp_verify_nonce((isset($_POST['_wpnonce']) ? sanitize_text_field(wp_unslash($_POST['_wpnonce'])) : ''))) {
                     wp_nonce_ays('-1');
                 }
 
                 $data = [];
-                $data['googlemap_api'] = (isset($_POST['googlemap_api']) ? trim($_POST['googlemap_api']) : '');
-                $data['useajax_events'] = (isset($_POST['useajax_events']) && $_POST['useajax_events'] == '1' ? '1' : '');
+                $data['googlemap_api'] = (isset($_POST['googlemap_api']) ? trim(sanitize_text_field(wp_unslash($_POST['googlemap_api']))) : '');
+                $data['useajax_events'] = (isset($_POST['useajax_events']) && '1' === $_POST['useajax_events'] ? '1' : '');
 
                 update_option($this->main_option_name, $data);
 
                 $output['form_result_class'] = 'notice-success';
-                $output['form_result_msg'] =  __('Settings saved.');
+                $output['form_result_msg'] = __('Settings saved.');
             }
 
             // get all options

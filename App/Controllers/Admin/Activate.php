@@ -1,4 +1,9 @@
 <?php
+/**
+ * Activation.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Admin;
@@ -28,7 +33,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Activate')) {
 
             // check that there is an option from this plugin added, if not then add new.
             $plugin_option = get_option($this->main_option_name);
-            if ($plugin_option === false) {
+            if (false === $plugin_option) {
                 // not exists, add new.
                 add_option($this->main_option_name, []);
             }
@@ -68,17 +73,17 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Activate')) {
         public function updatePlugin(\WP_Upgrader $upgrader, array $hook_extra)
         {
             if (is_array($hook_extra) && array_key_exists('action', $hook_extra) && array_key_exists('type', $hook_extra) && array_key_exists('plugins', $hook_extra)) {
-                if ($hook_extra['action'] == 'update' && $hook_extra['type'] == 'plugin' && is_array($hook_extra['plugins']) && !empty($hook_extra['plugins'])) {
+                if ('update' === $hook_extra['action'] && 'plugin' === $hook_extra['type'] && is_array($hook_extra['plugins']) && !empty($hook_extra['plugins'])) {
                     $this_plugin = plugin_basename(RDEVENTS_FILE);
                     foreach ($hook_extra['plugins'] as $key => $plugin) {
-                        if ($this_plugin == $plugin) {
+                        if ($this_plugin === $plugin) {
                             $this_plugin_updated = true;
                             break;
                         }
                     }// endforeach;
                     unset($key, $plugin, $this_plugin);
 
-                    if (isset($this_plugin_updated) && $this_plugin_updated === true) {
+                    if (isset($this_plugin_updated) && true === $this_plugin_updated) {
                         \RdEvents\App\Libraries\Debug::writeLog('RdEvents updatePlugin() method was called.');
 
                         global $wpdb;

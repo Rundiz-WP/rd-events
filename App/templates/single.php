@@ -2,10 +2,12 @@
 /**
  * The basic template for display single post of event.<br>
  * You can copy and modify this in your theme folder.
+ * 
+ * @package rundiz-events
  */
 
 
-add_action('wp_enqueue_scripts', function() {
+add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('rd-events-map-functions');
     wp_enqueue_script('rd-events-google-map-api');
 });
@@ -36,7 +38,7 @@ get_header();
                             echo '</p>';
 
                             $location = rdevents_getLocationValues();
-                            if ($location !== null) {
+                            if (null !== $location) {
                                 echo '<h4>' . __('Location', 'rd-events') . '</h4>';
                                 if (isset($location['location'])) {
                                     echo '<p>'.$location['location'].'</p>';

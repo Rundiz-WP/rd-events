@@ -1,4 +1,10 @@
 <?php
+/**
+ * Available shortcodes.
+ * 
+ * @package rundiz-events
+ */
+
 
 namespace RdEvents\App\Controllers\Front\Shortcodes;
 
@@ -34,7 +40,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Front\\Shortcodes\\AvailableSho
 
                 $output = '';
 
-                if (isset($atts['showdate']) && $atts['showdate'] === 'true') {
+                if (isset($atts['showdate']) && 'true' === $atts['showdate']) {
                     $output .= '<h4>' . __('Event date/time', 'rd-events') . '</h4>'."\n";
                     $output .= '<p>' . rdevents_getEventStart() . ' - ' . rdevents_getEventEnd();
                     if (rdevents_isAlldayEvent() === true) {
@@ -43,9 +49,9 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Front\\Shortcodes\\AvailableSho
                     $output .= '</p>'."\n";
                 }
 
-                if (isset($atts['showlocation']) && $atts['showlocation'] === 'true') {
+                if (isset($atts['showlocation']) && 'true' === $atts['showlocation']) {
                     $location = rdevents_getLocationValues();
-                    if ($location !== null) {
+                    if (null !== $location) {
                         $output .= '<h4>' . __('Location', 'rd-events') . '</h4>'."\n";
                         if (isset($location['location'])) {
                             $output .= '<p>'.$location['location'].'</p>'."\n";

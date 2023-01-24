@@ -1,6 +1,8 @@
 <?php
 /**
  * This is the utilities functions that use ViewsUtilities class.
+ * 
+ * @package rundiz-events
  */
 
 

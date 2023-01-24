@@ -1,4 +1,9 @@
 <?php
+/**
+ * Register events custom post type.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Admin\Events;
@@ -61,7 +66,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsPostType')
                 'show_in_admin_bar' => false,
 
                 // make new editor support in WordPress 5 (Gutenberg).
-                //'show_in_rest' => true,
+                // 'show_in_rest' => true,
                 // Skip this for now and wait until WordPress completely drop TinyMCE because old editor is a lot easier to understand.
                 // required WP 4.7.
 

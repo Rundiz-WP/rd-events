@@ -1,4 +1,9 @@
 <?php
+/**
+ * Events AJAX.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Front\Events;
@@ -24,19 +29,19 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Front\\Events\\Events')) {
          */
         public function ajaxGetEvents()
         {
-            if (is_admin() === true && isset($_SERVER['REQUEST_METHOD']) && strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
+            if (is_admin() === true && isset($_SERVER['REQUEST_METHOD']) && strtolower(sanitize_text_field(wp_unslash($_SERVER['REQUEST_METHOD']))) === 'post') {
                 if (
                     isset($_POST['nonce']) &&
                     isset($_POST['start']) &&
                     isset($_POST['end']) &&
-                    wp_verify_nonce($_POST['nonce'], 'rd-events-calendar')
+                    wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'rd-events-calendar')
                 ) {
-                    $start_date_month = $_POST['start'];
-                    $end_date_month = $_POST['end'];
+                    $start_date_month = sanitize_text_field(wp_unslash($_POST['start']));
+                    $end_date_month = sanitize_text_field(wp_unslash($_POST['end']));
                     $query_args = [
                         'post_type' => $this->post_type,
                         'nopaging' => true,
-                        'meta_query' => [
+                        'meta_query' => [// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
                             // query event that start between this month or end between this month
                             [
                                 [
@@ -79,7 +84,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Front\\Events\\Events')) {
 
                             $evcal_start_date = \RdEvents\App\Libraries\ViewsUtilities::getEventStart();
                             $evcal_end_date = \RdEvents\App\Libraries\ViewsUtilities::getEventEnd();
-                            if ($evcal_end_date == null) {
+                            if (empty($evcal_end_date)) {
                                 $evcal_end_date = $evcal_start_date;
                             }
 

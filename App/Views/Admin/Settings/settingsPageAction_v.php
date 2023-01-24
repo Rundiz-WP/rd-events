@@ -18,7 +18,7 @@
                 <tr>
                     <th scope="row"><?php _e('Google Map API Key', 'rd-events'); ?></th>
                     <td>
-                        <input class="widefat" type="text" name="googlemap_api" value="<?php if (isset($googlemap_api)) {esc_attr_e($googlemap_api);} ?>">
+                        <input class="widefat" type="text" name="googlemap_api" value="<?php if (isset($googlemap_api)) {printf(esc_attr('%s'), $googlemap_api);} ?>">
                         <p class="description">
                             <?php 
                             echo sprintf(
@@ -40,7 +40,7 @@
                     <th scope="row"><?php _e('Use Ajax events', 'rd-events'); ?></th>
                     <td>
                         <label>
-                            <input type="checkbox" name="useajax_events" value="1"<?php if (isset($useajax_events) && $useajax_events == '1') {echo ' checked="checked"';} ?>>
+                            <input type="checkbox" name="useajax_events" value="1"<?php if (isset($useajax_events) && '1' === $useajax_events) {echo ' checked="checked"';} ?>>
                             <?php _e('Check this to use Ajax to get events, otherwise it will render all events into js at once.', 'rd-events'); ?> 
                         </label>
                         <p class="description">

@@ -1,9 +1,9 @@
 <?php
 /**
+ * Debug class.
  * 
- * @author Vee W.
+ * @package rundiz-events
  * @license http://opensource.org/licenses/MIT MIT
- * 
  */
 
 

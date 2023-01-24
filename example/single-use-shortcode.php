@@ -16,7 +16,7 @@
  * If you use this shortcode then you no need to enqueue map functions, Google Maps API, and css.
  * If you want to override the css of the map, use <code>wp_dequeue_style('rd-events-map');</code> and then enqueue yours.<br>
  * 
- * @author Vee W.
+ * @package rundiz-events
  */
 
 

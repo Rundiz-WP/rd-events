@@ -1,4 +1,9 @@
 <?php
+/**
+ * Enqueue/Register scripts and styles.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Front;
@@ -50,7 +55,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Front\\EnqueueStyleScript')) {
                 'txtToday' => __('Today', 'rd-events'),
             ];
             $options = get_option($this->main_option_name);
-            if (!isset($options['useajax_events']) || (isset($options['useajax_events']) && $options['useajax_events'] == '1')) {
+            if (!isset($options['useajax_events']) || (isset($options['useajax_events']) && '1' === $options['useajax_events'])) {
                 $rdevents_l10n['ajaxurl'] = admin_url('admin-ajax.php');
             } else {
                 $EventsModel = new \RdEvents\App\Models\EventsModel();

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Calendar widget.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Widgets;
@@ -60,7 +65,7 @@ if (!class_exists('\\RdEvents\\App\\Widgets\\CalendarWidget')) {
                     'txtToday' => __('Today', 'rd-events'),
                 ];
                 $options = get_option($this->main_option_name);
-                if (!isset($options['useajax_events']) || (isset($options['useajax_events']) && $options['useajax_events'] == '1')) {
+                if (!isset($options['useajax_events']) || (isset($options['useajax_events']) && '1' === $options['useajax_events'])) {
                     $widget_l10n['ajaxurl'] = admin_url('admin-ajax.php');
                 } else {
                     $EventsModel = new \RdEvents\App\Models\EventsModel();
@@ -141,7 +146,7 @@ if (!class_exists('\\RdEvents\\App\\Widgets\\CalendarWidget')) {
             // set output front-end widget ---------------------------------
             $output = $args['before_widget']."\n";
 
-            if ($instance['rd-events-calendar-widget-title'] != null) {
+            if (!empty($instance['rd-events-calendar-widget-title'])) {
                 $output .= $args['before_title'] . apply_filters('widget_title', $instance['rd-events-calendar-widget-title']) . $args['after_title']."\n";
             }
 

@@ -1,4 +1,9 @@
 <?php
+/**
+ * App traits.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App;

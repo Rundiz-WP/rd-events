@@ -1,4 +1,9 @@
 <?php
+/**
+ * Events DB model.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Models;
@@ -36,7 +41,7 @@ if (!class_exists('\\RdEvents\\App\\Models\\EventsModel')) {
 
                     $evcal_start_date = \RdEvents\App\Libraries\ViewsUtilities::getEventStart();
                     $evcal_end_date = \RdEvents\App\Libraries\ViewsUtilities::getEventEnd();
-                    if ($evcal_end_date == null) {
+                    if (empty($evcal_end_date)) {
                         $evcal_end_date = $evcal_start_date;
                     }
 

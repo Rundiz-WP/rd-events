@@ -1,17 +1,17 @@
-# Copyright (C) 2019 Vee Winch
-# This file is distributed under the same license as the Rundiz Events plugin.
+# Copyright (C) 2023 Vee Winch
+# This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: Rundiz Events 0.3\n"
+"Project-Id-Version: Rundiz Events 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rd-events\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-01-23T13:00:45+07:00\n"
+"POT-Creation-Date: 2023-01-24T15:13:25+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.1.0\n"
+"X-Generator: WP-CLI 2.8.0-alpha-9dfa966\n"
 "X-Domain: rd-events\n"
 
 #. Plugin Name of the plugin
@@ -34,182 +34,168 @@ msgstr ""
 msgid "http://rundiz.com"
 msgstr ""
 
-#. translators: %1$s: Current WordPress version, %2$s: Required WordPress version.
-#: App/App.php:38
-msgid "Your WordPress version does not meet the requirement. (%1$s < %2$s)."
-msgstr ""
-
-#. translators: %1$s: Current PHP version, %2$s: Required PHP version.
-#: App/App.php:44
-msgid "Your PHP version does not meet the requirement. (%1$s < %2$s)."
-msgstr ""
-
-#: App/Controllers/Admin/Events/EventsManagePosts.php:29
+#: App/Controllers/Admin/Events/EventsManagePosts.php:34
 msgid "Event date"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsManagePosts.php:30
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:49
-#: App/templates/single.php:40
+#: App/Controllers/Admin/Events/EventsManagePosts.php:35
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:55
+#: App/templates/single.php:42
 #: App/Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:39
 msgid "Location"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsManagePosts.php:68
+#: App/Controllers/Admin/Events/EventsManagePosts.php:73
 #: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:82
 msgid "All day"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:30
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:35
 msgid "The field date on start and end are not exists."
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:33
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:38
 msgid "The start date is incorrect date format."
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:36
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:41
 msgid "The end date is incorrect date format."
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:39
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:44
 msgid "The selected end date must be after start date."
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:42
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:47
 msgid "You had entered invalid time values."
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:152
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:157
 msgid "Event Date"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:154
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:159
 msgid "Event Location"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:36
+#: App/Controllers/Admin/Events/EventsPostType.php:41
 msgid "Events"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:37
+#: App/Controllers/Admin/Events/EventsPostType.php:42
 msgid "Event"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:38
+#: App/Controllers/Admin/Events/EventsPostType.php:43
 msgid "Add New Event"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:39
+#: App/Controllers/Admin/Events/EventsPostType.php:44
 msgid "Edit Event"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:40
+#: App/Controllers/Admin/Events/EventsPostType.php:45
 msgid "New Event"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:41
+#: App/Controllers/Admin/Events/EventsPostType.php:46
 msgid "View Event"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:42
+#: App/Controllers/Admin/Events/EventsPostType.php:47
 msgid "View Events"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:43
+#: App/Controllers/Admin/Events/EventsPostType.php:48
 msgid "Search Events"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:44
+#: App/Controllers/Admin/Events/EventsPostType.php:49
 msgid "No event found."
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:45
+#: App/Controllers/Admin/Events/EventsPostType.php:50
 msgid "No event found in trash."
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:46
+#: App/Controllers/Admin/Events/EventsPostType.php:51
 msgid "All Events"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:47
+#: App/Controllers/Admin/Events/EventsPostType.php:52
 msgid "Event Archives"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:48
+#: App/Controllers/Admin/Events/EventsPostType.php:53
 msgid "Insert into event"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:49
+#: App/Controllers/Admin/Events/EventsPostType.php:54
 msgid "Upload to this event"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:50
+#: App/Controllers/Admin/Events/EventsPostType.php:55
 msgid "Filter events list"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:51
+#: App/Controllers/Admin/Events/EventsPostType.php:56
 msgid "Events list navigation"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:52
+#: App/Controllers/Admin/Events/EventsPostType.php:57
 msgid "Events list"
 msgstr ""
 
-#: App/Controllers/Admin/Events/EventsPostType.php:57
+#: App/Controllers/Admin/Events/EventsPostType.php:62
 msgid "Manage events and display it on front-end."
 msgstr ""
 
-#: App/Controllers/Admin/PluginMetaAndLinks.php:73
-msgid "Donate"
-msgstr ""
-
-#: App/Controllers/Admin/Settings.php:23
+#: App/Controllers/Admin/Settings.php:28
 msgid "Settings"
 msgstr ""
 
-#: App/Controllers/Front/EnqueueStyleScript.php:47
-#: App/Widgets/CalendarWidget.php:57
+#: App/Controllers/Front/EnqueueStyleScript.php:52
+#: App/Widgets/CalendarWidget.php:62
 msgid "Day"
 msgstr ""
 
-#: App/Controllers/Front/EnqueueStyleScript.php:48
-#: App/Widgets/CalendarWidget.php:58
+#: App/Controllers/Front/EnqueueStyleScript.php:53
+#: App/Widgets/CalendarWidget.php:63
 msgid "Week"
 msgstr ""
 
-#: App/Controllers/Front/EnqueueStyleScript.php:49
-#: App/Widgets/CalendarWidget.php:59
+#: App/Controllers/Front/EnqueueStyleScript.php:54
+#: App/Widgets/CalendarWidget.php:64
 msgid "Month"
 msgstr ""
 
-#: App/Controllers/Front/EnqueueStyleScript.php:50
-#: App/Widgets/CalendarWidget.php:60
+#: App/Controllers/Front/EnqueueStyleScript.php:55
+#: App/Widgets/CalendarWidget.php:65
 msgid "Today"
 msgstr ""
 
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:38
-#: App/templates/single.php:28
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:44
+#: App/templates/single.php:30
 msgid "Event date/time"
 msgstr ""
 
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:41
-#: App/templates/single.php:34
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:47
+#: App/templates/single.php:36
 msgid "All day event."
 msgstr ""
 
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:79
-#: App/templates/archive.php:33
-#: App/Widgets/CalendarWidget.php:152
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:85
+#: App/templates/archive.php:35
+#: App/Widgets/CalendarWidget.php:157
 #: example/archive-use-normal-code.php:16
 msgid "Getting events data"
 msgstr ""
 
-#: App/templates/single.php:50
+#: App/templates/single.php:52
 msgid "Not found"
 msgstr ""
 
-#: App/templates/single.php:51
+#: App/templates/single.php:53
 msgid "Nothing found."
 msgstr ""
 
@@ -283,14 +269,14 @@ msgstr ""
 msgid "If you want to reduce connection to server (such as ajax) or if you want to generate static HTML from WordPress, uncheck this box can help your front-end display events without any request to server."
 msgstr ""
 
-#: App/Widgets/CalendarWidget.php:27
+#: App/Widgets/CalendarWidget.php:32
 msgid "Events Calendar"
 msgstr ""
 
-#: App/Widgets/CalendarWidget.php:29
+#: App/Widgets/CalendarWidget.php:34
 msgid "Display events in the calendar widget."
 msgstr ""
 
-#: App/Widgets/CalendarWidget.php:156
+#: App/Widgets/CalendarWidget.php:161
 msgid "See more"
 msgstr ""

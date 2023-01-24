@@ -1,4 +1,9 @@
 <?php
+/**
+ * Metaboxes in edit post page.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Admin\Events;
@@ -43,7 +48,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                     break;
             }
 
-            if (isset($error_message) && trim($error_message) != null) {
+            if (isset($error_message) && !empty(trim($error_message))) {
                 echo '<div class="notice notice-error is-dismissible">';
                 echo '<p>' . $error_message . '</p>';
                 echo '</div>';
@@ -66,7 +71,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
 
             if (
                 isset($post->post_type) &&
-                $post->post_type == $this->post_type &&
+                $post->post_type === $this->post_type &&
                 (
                     'post.php' === $hook_suffix ||
                     'post-new.php' === $hook_suffix
@@ -171,25 +176,25 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
             // validate date picker box.
             if (
                 isset($_POST[plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker']) &&
-                wp_verify_nonce($_POST[plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker'], plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker') &&
+                wp_verify_nonce(sanitize_text_field(wp_unslash($_POST[plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker'])), plugin_basename(dirname(RDEVENTS_FILE)).'-datepicker') &&
                 isset($_POST['_event_date_start']) &&
                 isset($_POST['_event_date_end'])
             ) {
                 // if passed nonce check for datepicker
                 // validate form
-                if (\DateTime::createFromFormat('Y-m-d', $_POST['_event_date_start']) === false) {
+                if (\DateTime::createFromFormat('Y-m-d', sanitize_text_field(wp_unslash($_POST['_event_date_start']))) === false) {
                     // if start date incorrect format.
-                    add_filter('redirect_post_location', function($location) {
+                    add_filter('redirect_post_location', function ($location) {
                         return add_query_arg(['message' => 4, 'rundiz-events-error' => 2], $location);
                     });
-                } elseif (\DateTime::createFromFormat('Y-m-d', $_POST['_event_date_end']) === false) {
+                } elseif (\DateTime::createFromFormat('Y-m-d', sanitize_text_field(wp_unslash($_POST['_event_date_end']))) === false) {
                     // if end date incorrect format.
-                    add_filter('redirect_post_location', function($location) {
+                    add_filter('redirect_post_location', function ($location) {
                         return add_query_arg(['message' => 4, 'rundiz-events-error' => 3], $location);
                     });
-                } elseif (strtotime($_POST['_event_date_start']) > strtotime($_POST['_event_date_end'])) {
+                } elseif (strtotime(sanitize_text_field(wp_unslash($_POST['_event_date_start']))) > strtotime(sanitize_text_field(wp_unslash($_POST['_event_date_end'])))) {
                     // if start date after end date.
-                    add_filter('redirect_post_location', function($location) {
+                    add_filter('redirect_post_location', function ($location) {
                         return add_query_arg(['message' => 4, 'rundiz-events-error' => 4], $location);
                     });
                 } elseif (
@@ -197,7 +202,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                         !isset($_POST['_event_time_allday']) ||
                         (
                             isset($_POST['_event_time_allday']) &&
-                            $_POST['_event_time_allday'] != '1'
+                            '1' !== $_POST['_event_time_allday']
                         )
                     ) &&
                     (
@@ -206,7 +211,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                     )
                 ) {
                     // if not all day event and time start or time end not exists.
-                    add_filter('redirect_post_location', function($location) {
+                    add_filter('redirect_post_location', function ($location) {
                         return add_query_arg(['message' => 4, 'rundiz-events-error' => 5], $location);
                     });
                 } elseif (
@@ -214,40 +219,40 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                         !isset($_POST['_event_time_allday']) ||
                         (
                             isset($_POST['_event_time_allday']) &&
-                            $_POST['_event_time_allday'] != '1'
+                            '1' !== $_POST['_event_time_allday']
                         )
                     ) &&
                     (
                         (
                             isset($_POST['_event_time_start']) &&
-                            \DateTime::createFromFormat('Y-m-d H:i', $_POST['_event_date_start'].' '.$_POST['_event_time_start']) === false
+                            \DateTime::createFromFormat('Y-m-d H:i', sanitize_text_field(wp_unslash($_POST['_event_date_start'])).' '.sanitize_text_field(wp_unslash($_POST['_event_time_start']))) === false
                         ) ||
                         (
                             isset($_POST['_event_time_end']) &&
-                            \DateTime::createFromFormat('Y-m-d H:i', $_POST['_event_date_end'].' '.$_POST['_event_time_end']) === false
+                            \DateTime::createFromFormat('Y-m-d H:i', sanitize_text_field(wp_unslash($_POST['_event_date_end'])).' '.sanitize_text_field(wp_unslash($_POST['_event_time_end']))) === false
                         )
                     )
                 ) {
                     // if not all day event and time start or end is incorrect format.
-                    add_filter('redirect_post_location', function($location) {
+                    add_filter('redirect_post_location', function ($location) {
                         return add_query_arg(['message' => 4, 'rundiz-events-error' => 5], $location);
                     });
                 } else {
                     // all validation passed!
                     $validated_boxes[] = 'datepicker';
                     // prepare data for save
-                    $data['_event_time_allday'] = (isset($_POST['_event_time_allday']) && $_POST['_event_time_allday'] == '1' ? '1' : '0');
-                    $data['_event_date_start'] = $_POST['_event_date_start'];
-                    $data['_event_time_start'] = (isset($data['_event_time_allday']) && $data['_event_time_allday'] !== '1' ? $_POST['_event_time_start'] : '');
-                    $data['_event_date_end'] = $_POST['_event_date_end'];
-                    $data['_event_time_end'] = (isset($data['_event_time_allday']) && $data['_event_time_allday'] !== '1' ? $_POST['_event_time_end'] : '');
+                    $data['_event_time_allday'] = (isset($_POST['_event_time_allday']) && '1' === $_POST['_event_time_allday'] ? '1' : '0');
+                    $data['_event_date_start'] = sanitize_text_field(wp_unslash($_POST['_event_date_start']));
+                    $data['_event_time_start'] = (isset($data['_event_time_allday']) && '1' !== $data['_event_time_allday'] ? sanitize_text_field(wp_unslash($_POST['_event_time_start'])) : '');
+                    $data['_event_date_end'] = sanitize_text_field(wp_unslash($_POST['_event_date_end']));
+                    $data['_event_time_end'] = (isset($data['_event_time_allday']) && '1' !== $data['_event_time_allday'] ? sanitize_text_field(wp_unslash($_POST['_event_time_end'])) : '');
                 }
             }
 
             // validate location box.
             if (
                 isset($_POST[plugin_basename(dirname(RDEVENTS_FILE)).'-map']) &&
-                wp_verify_nonce($_POST[plugin_basename(dirname(RDEVENTS_FILE)).'-map'], plugin_basename(dirname(RDEVENTS_FILE)).'-map') &&
+                wp_verify_nonce(sanitize_text_field(wp_unslash($_POST[plugin_basename(dirname(RDEVENTS_FILE)).'-map'])), plugin_basename(dirname(RDEVENTS_FILE)).'-map') &&
                 isset($_POST['_event_location']) &&
                 isset($_POST['_event_location_lat']) &&
                 isset($_POST['_event_location_lng'])
@@ -255,9 +260,9 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                 // if passed nonce check for datepicker
                 $validated_boxes[] = 'location';
 
-                $data['_event_location'] = (isset($_POST['_event_location']) ? trim($_POST['_event_location']) : '');
-                $data['_event_location_lat'] = (isset($_POST['_event_location_lat']) ? trim($_POST['_event_location_lat']) : '');
-                $data['_event_location_lng'] = (isset($_POST['_event_location_lng']) ? trim($_POST['_event_location_lng']) : '');
+                $data['_event_location'] = (isset($_POST['_event_location']) ? trim(sanitize_text_field(wp_unslash($_POST['_event_location']))) : '');
+                $data['_event_location_lat'] = (isset($_POST['_event_location_lat']) ? trim(sanitize_text_field(wp_unslash($_POST['_event_location_lat']))) : '');
+                $data['_event_location_lng'] = (isset($_POST['_event_location_lng']) ? trim(sanitize_text_field(wp_unslash($_POST['_event_location_lng']))) : '');
             }
 
             // save the data.

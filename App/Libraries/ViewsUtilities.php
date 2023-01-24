@@ -1,4 +1,9 @@
 <?php
+/**
+ * Views utility.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Libraries;
@@ -24,14 +29,14 @@ if (!class_exists('\\RdEvents\\App\\ibraries\\ViewsUtilities')) {
         {
             $post_id = (function_exists('get_the_ID') ? get_the_ID() : '0');
 
-            if ($post_id === false || $post_id === '0') {
+            if (false === $post_id || '0' === $post_id) {
                 return '';
             }
 
             $output = get_post_meta($post_id, '_event_date_end', true);
-            if ($date_only === false) {
+            if (false === $date_only) {
                 $time = get_post_meta($post_id, '_event_time_end', true);
-                if ($time != null) {
+                if (!empty($time)) {
                     $output .= ' ' . $time;
                 }
                 unset($time);
@@ -52,14 +57,14 @@ if (!class_exists('\\RdEvents\\App\\ibraries\\ViewsUtilities')) {
         {
             $post_id = (function_exists('get_the_ID') ? get_the_ID() : '0');
 
-            if ($post_id === false || $post_id === '0') {
+            if (false === $post_id || '0' === $post_id) {
                 return '';
             }
 
             $output = get_post_meta($post_id, '_event_date_start', true);
-            if ($date_only === false) {
+            if (false === $date_only) {
                 $time = get_post_meta($post_id, '_event_time_start', true);
-                if ($time != null) {
+                if (!empty($time)) {
                     $output .= ' ' . $time;
                 }
                 unset($time);
@@ -86,7 +91,7 @@ if (!class_exists('\\RdEvents\\App\\ibraries\\ViewsUtilities')) {
             }
             unset($options);
 
-            return 'https://maps.googleapis.com/maps/api/js?key=' . urlencode($googlemap_api) . '&amp;libraries=places';
+            return 'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode($googlemap_api) . '&amp;libraries=places';
         }// getGoogleMapsApiUrl
 
 
@@ -99,7 +104,7 @@ if (!class_exists('\\RdEvents\\App\\ibraries\\ViewsUtilities')) {
         {
             $post_id = (function_exists('get_the_ID') ? get_the_ID() : '0');
 
-            if ($post_id === false || $post_id === '0') {
+            if (false === $post_id || '0' === $post_id) {
                 return '';
             }
 
@@ -108,7 +113,7 @@ if (!class_exists('\\RdEvents\\App\\ibraries\\ViewsUtilities')) {
             $event_location_lat = get_post_meta($post_id, '_event_location_lat', true);
             $event_location_lng = get_post_meta($post_id, '_event_location_lng', true);
 
-            if ($event_location != null && $event_location_lat != null && $event_location_lng != null) {
+            if (!empty($event_location) && !empty($event_location_lat) && !empty($event_location_lng)) {
                 $output['location'] = $event_location;
                 $output['lat'] = $event_location_lat;
                 $output['lng'] = $event_location_lng;
@@ -141,13 +146,13 @@ if (!class_exists('\\RdEvents\\App\\ibraries\\ViewsUtilities')) {
         {
             $post_id = (function_exists('get_the_ID') ? get_the_ID() : '0');
 
-            if ($post_id === false || $post_id === '0') {
+            if (false === $post_id || '0' === $post_id) {
                 return false;
             }
 
             $allday = get_post_meta($post_id, '_event_time_allday', true);
 
-            if ($allday === '1') {
+            if ('1' === $allday) {
                 return true;
             }
 

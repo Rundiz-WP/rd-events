@@ -1,4 +1,10 @@
 <?php
+/**
+ * Event templates for specific front views.
+ * 
+ * @package rundiz-events
+ */
+
 
 namespace RdEvents\App\Controllers\Front\Events;
 

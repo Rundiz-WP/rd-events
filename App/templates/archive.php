@@ -2,10 +2,12 @@
 /**
  * The basic template for display category/archive page.<br>
  * You can copy and modify this in your theme folder.
+ * 
+ * @package rundiz-events
  */
 
 
-add_action('wp_enqueue_scripts', function() {
+add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('rd-events-fullcalendar');
     wp_enqueue_style('rd-events-fullcalendar-print');
     wp_enqueue_style('rd-events-calendar');
@@ -29,7 +31,7 @@ get_header();
 
                     <div class="rundiz-events-loading-events-template">
                         <span class="loading-icon">
-                            <img src="<?php echo trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/img/loading-squares.gif' ?>"><br>
+                            <img src="<?php echo trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/img/loading-squares.gif'; ?>"><br>
                             <?php _e('Getting events data', 'rd-events'); ?> 
                         </span>
                     </div><!--.rundiz-events-loading-events-template-->

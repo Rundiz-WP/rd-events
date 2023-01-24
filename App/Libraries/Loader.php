@@ -2,7 +2,7 @@
 /**
  * The loader file that will be use for load things such as controllers, views, etc...
  * 
- * @author Vee W.
+ * @package rundiz-events
  * @license http://opensource.org/licenses/MIT MIT
  */
 
@@ -50,19 +50,19 @@ if (!class_exists('\\RdEvents\\App\\Libraries\\Loader')) {
          * 
          * @param string $view_name The views file name refer from app/Views folder.
          * @param array $data Array data for send its key as variable into view.
-         * @param boolean $require_once Use include or include_once? If true, use include_once.
+         * @param boolean $requireOnce Use include or include_once? If true, use include_once.
          * @return boolean Return true if success loading, or return false if failed to load.
          */
-        public function loadView($view_name, array $data = [], $require_once = false)
+        public function loadView($view_name, array $data = [], $requireOnce = false)
         {
             $view_dir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR;
 
-            if ($view_name != null && file_exists($view_dir . $view_name . '.php') && is_file($view_dir . $view_name . '.php')) {
+            if (!empty($view_name) && file_exists($view_dir . $view_name . '.php') && is_file($view_dir . $view_name . '.php')) {
                 if (is_array($data)) {
                     extract($data, EXTR_PREFIX_SAME, 'dupvar_');
                 }
 
-                if ($require_once === true) {
+                if (true === $requireOnce) {
                     include_once $view_dir . $view_name . '.php';
                 } else {
                     include $view_dir . $view_name . '.php';

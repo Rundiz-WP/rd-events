@@ -1,4 +1,9 @@
 <?php
+/**
+ * Manage events posts.
+ * 
+ * @package rundiz-events
+ */
 
 
 namespace RdEvents\App\Controllers\Admin\Events;
@@ -24,7 +29,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsManagePost
         {
             $new_columns = [];
             foreach ($columns as $key => $value) {
-                if ($key === 'title') {
+                if ('title' === $key) {
                     $new_columns[$key] = $value;
                     $new_columns['rd_events_date'] = __('Event date', 'rd-events');
                     $new_columns['rd_events_location'] = __('Location', 'rd-events');
@@ -55,16 +60,16 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsManagePost
                     $event_time_allday = get_post_meta($post_id, '_event_time_allday', true);
 
                     echo $event_date_start;
-                    if ($event_time_start != null) {
+                    if (!empty($event_time_start)) {
                         echo ' '.$event_time_start;
                     }
-                    if ($event_date_end != null) {
+                    if (!empty($event_date_end)) {
                         echo ' - '.$event_date_end;
-                        if ($event_time_end != null) {
+                        if (!empty($event_time_end)) {
                             echo ' '.$event_time_end;
                         }
                     }
-                    if ($event_time_allday === '1') {
+                    if ('1' === $event_time_allday) {
                         echo '<br>'.__('All day', 'rd-events');
                     }
 
