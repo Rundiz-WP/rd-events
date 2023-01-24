@@ -91,7 +91,7 @@ if (!class_exists('\\RdEvents\\App\\ibraries\\ViewsUtilities')) {
             }
             unset($options);
 
-            return 'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode($googlemap_api) . '&amp;libraries=places';
+            return 'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode($googlemap_api) . '&libraries=places';
         }// getGoogleMapsApiUrl
 
 
