@@ -99,7 +99,6 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                     [
                         'autocomplete' => null,
                         'geocoder' => null,
-                        'jsProperties' => new \stdClass(),
                         'map' => null,
                         'marker' => null,
                         'infowindow' => null,
