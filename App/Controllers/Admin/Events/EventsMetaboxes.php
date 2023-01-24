@@ -92,8 +92,22 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                 // enqueue js
                 wp_enqueue_script('rd-events-jquery-ui-timepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/jquery.ui.timepicker.js', ['jquery', 'jquery-ui-core'], '0.3.3', true);
                 wp_enqueue_script('rd-events-datepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/rd-events-datepicker.js', ['jquery', 'jquery-ui-datepicker', 'rd-events-jquery-ui-timepicker'], RDEVENTS_VERSION, true);
-                wp_enqueue_script('rd-events-map', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/rd-events-map.js', ['jquery'], RDEVENTS_VERSION, true);
-                wp_enqueue_script('rd-events-google-map', 'https://maps.googleapis.com/maps/api/js?key=' . $googlemap_api . '&libraries=places&callback=rdEventsInitMap', [], false, true);
+                wp_register_script('rd-events-map', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/admin/rd-events-map.js', ['jquery'], RDEVENTS_VERSION, true);
+                wp_localize_script(
+                    'rd-events-map',
+                    'RdEventsMap',
+                    [
+                        'autocomplete' => null,
+                        'geocoder' => null,
+                        'jsProperties' => new \stdClass(),
+                        'map' => null,
+                        'marker' => null,
+                        'infowindow' => null,
+                        'infowindowContent' => null,
+                    ]
+                );
+                wp_enqueue_script('rd-events-map');
+                wp_enqueue_script('rd-events-google-map', 'https://maps.googleapis.com/maps/api/js?key=' . $googlemap_api . '&libraries=places&callback=rdEventsInitMap', ['rd-events-map'], false, true);
 
                 unset($googlemap_api);
             }

@@ -25,7 +25,10 @@
                                 /* translators: %1$s: Link to Google APIs manager, %2$s: Highlight Google Maps JS API text. */
                                 __('Go to %1$s and enable %2$s.', 'rd-events'), 
                                 '<a href="https://console.developers.google.com/apis/library" target="googleapis">' . __('Google APIs Manager', 'rd-events') . '</a>',
-                                '<strong>' . __('Google Maps JavaScript API ', 'rd-events') . '</strong>'
+                                '<strong>' . __('Maps JavaScript API', 'rd-events') 
+                                    . ', ' . __('Places API', 'rd-events') 
+                                    . ', ' . __('Geocoding API', 'rd-events') 
+                                    . '</strong>'
                             ) . '<br>'; 
                             echo sprintf(
                                 /* translators: %s: Credentials text. */
