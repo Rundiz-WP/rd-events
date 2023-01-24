@@ -77,13 +77,6 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                     'post-new.php' === $hook_suffix
                 )
             ) {
-                $options = get_option($this->main_option_name);
-                $googlemap_api = '';
-                if (is_array($options) && array_key_exists('googlemap_api', $options)) {
-                    $googlemap_api = $options['googlemap_api'];
-                }
-                unset($options);
-
                 // enqueue css
                 wp_enqueue_style('rd-events-jquery-ui', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/jquery-ui/jquery-ui.min.css', [], '1.11.4');
                 wp_enqueue_style('rd-events-jquery-ui-timepicker', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/css/admin/jquery.ui.timepicker.css', ['rd-events-jquery-ui'], '0.3.3');
@@ -106,9 +99,7 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Admin\\Events\\EventsMetaboxes'
                     ]
                 );
                 wp_enqueue_script('rd-events-map');
-                wp_enqueue_script('rd-events-google-map', 'https://maps.googleapis.com/maps/api/js?key=' . $googlemap_api . '&libraries=places&callback=rdEventsInitMap', ['rd-events-map'], false, true);
-
-                unset($googlemap_api);
+                wp_enqueue_script('rd-events-google-map', rdevents_getGoogleMapsApiUrl() . '&callback=rdEventsInitMap', ['rd-events-map'], false, true);
             }
         }// enqueueScripts
 
