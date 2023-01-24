@@ -3,7 +3,7 @@
  * Plugin Name: Rundiz Events
  * Plugin URI: https://rundiz.com/?p=319
  * Description: Manage your events and display in the calendar or list.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 4.6.0
  * Requires PHP: 5.5
  * Author: Vee Winch

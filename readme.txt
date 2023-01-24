@@ -1,12 +1,12 @@
 === Rundiz Events ===
 Contributors: okvee
 Tags: events, meeting, plans, calendar
-Tested up to: 5.8.2
-Stable tag: 1.0.1
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+Tested up to: 6.2
 Requires at least: 4.6.0
 Requires PHP: 5.5
+Stable tag: 1.0.2
+License: MIT
+License URI: http://opensource.org/licenses/MIT
 
 Manage your events and display in the calendar or list.
 
@@ -50,6 +50,15 @@ Please ask your question in support section and add mention to @okvee.
 6. Screenshot of how it works on real website.
 
 == Changelog ==
+= 1.0.2 =
+2023-01-24
+
+* Update FullCalendar to 3.10.5
+* Update moment.js to 2.29.2
+* Remove plugin's row meta.
+* Improve code by escape, sanitize as reported by PHP CodeSniffer & WordPress coding standard.
+* Fix Google Maps on admin page to work again.
+* Fix Google Maps on front page to work.
 
 = 1.0.1 =
 2019-03-07
