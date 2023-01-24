@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rundiz Events\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rd-events\n"
-"POT-Creation-Date: 2019-01-23T13:00:45+07:00\n"
-"PO-Revision-Date: 2019-01-23 13:01+0700\n"
+"POT-Creation-Date: 2023-01-24T18:41:32+07:00\n"
+"PO-Revision-Date: 2023-01-24 18:42+0700\n"
 "Last-Translator: Vee W.\n"
 "Language-Team: \n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
-"X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx;_n_noop;_nx_noop;translate_nooped_plural;esc_html__;"
 "esc_html_e;esc_html_x;esc_attr__;esc_attr_e;esc_attr_x;number_format_i18n;date_i18n\n"
@@ -41,173 +41,163 @@ msgstr ""
 msgid "http://rundiz.com"
 msgstr ""
 
-#. translators: %1$s: Current WordPress version, %2$s: Required WordPress version.
-#: App/App.php:38
-msgid "Your WordPress version does not meet the requirement. (%1$s < %2$s)."
-msgstr "รุ่นเวิร์ดเพรสของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%1$s < %2$s)."
-
-#. translators: %1$s: Current PHP version, %2$s: Required PHP version.
-#: App/App.php:44
-msgid "Your PHP version does not meet the requirement. (%1$s < %2$s)."
-msgstr "รุ่น PHP ของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%1$s < %2$s)."
-
-#: App/Controllers/Admin/Events/EventsManagePosts.php:29
+#: App/Controllers/Admin/Events/EventsManagePosts.php:34
 msgid "Event date"
 msgstr "วันที่เหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsManagePosts.php:30
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:49 App/templates/single.php:40
+#: App/Controllers/Admin/Events/EventsManagePosts.php:35
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:55 App/templates/single.php:42
 #: App/Views/Admin/Events/EventsMetaboxes/metaboxEventLocation_v.php:39
 msgid "Location"
 msgstr "สถานที่"
 
-#: App/Controllers/Admin/Events/EventsManagePosts.php:68
+#: App/Controllers/Admin/Events/EventsManagePosts.php:73
 #: App/Views/Admin/Events/EventsMetaboxes/metaboxEventDate_v.php:82
 msgid "All day"
 msgstr "ทั้งวัน"
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:30
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:35
 msgid "The field date on start and end are not exists."
 msgstr "ช่องวันที่เริ่มและสิ้นสุดไม่ปรากฏ."
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:33
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:38
 msgid "The start date is incorrect date format."
 msgstr "รูปแบบวันที่เริ่มไม่ถูกต้อง."
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:36
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:41
 msgid "The end date is incorrect date format."
 msgstr "รูปแบบวันที่สิ้นสุดไม่ถูกต้อง."
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:39
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:44
 msgid "The selected end date must be after start date."
 msgstr "วันที่สิ้นสุดต้องอยู่หลังวันที่เริ่ม."
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:42
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:47
 msgid "You had entered invalid time values."
 msgstr "คุณได้กรอกเวลาไม่ถูกต้อง."
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:152
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:161
 msgid "Event Date"
 msgstr "วันที่เหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsMetaboxes.php:154
+#: App/Controllers/Admin/Events/EventsMetaboxes.php:163
 msgid "Event Location"
 msgstr "สถานที่เหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:36
+#: App/Controllers/Admin/Events/EventsPostType.php:41
 msgid "Events"
 msgstr "เหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:37
+#: App/Controllers/Admin/Events/EventsPostType.php:42
 msgid "Event"
 msgstr "เหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:38
+#: App/Controllers/Admin/Events/EventsPostType.php:43
 msgid "Add New Event"
 msgstr "เพิ่มเหตุการณ์ใหม่"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:39
+#: App/Controllers/Admin/Events/EventsPostType.php:44
 msgid "Edit Event"
 msgstr "แก้ไขเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:40
+#: App/Controllers/Admin/Events/EventsPostType.php:45
 msgid "New Event"
 msgstr "เหตุการณ์ใหม่"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:41
+#: App/Controllers/Admin/Events/EventsPostType.php:46
 msgid "View Event"
 msgstr "ดูเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:42
+#: App/Controllers/Admin/Events/EventsPostType.php:47
 msgid "View Events"
 msgstr "ดูเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:43
+#: App/Controllers/Admin/Events/EventsPostType.php:48
 msgid "Search Events"
 msgstr "ค้นหาเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:44
+#: App/Controllers/Admin/Events/EventsPostType.php:49
 msgid "No event found."
 msgstr "ไม่พบเหตุการณ์."
 
-#: App/Controllers/Admin/Events/EventsPostType.php:45
+#: App/Controllers/Admin/Events/EventsPostType.php:50
 msgid "No event found in trash."
 msgstr "ไม่พบเหตุการณ์ในถังขยะ."
 
-#: App/Controllers/Admin/Events/EventsPostType.php:46
+#: App/Controllers/Admin/Events/EventsPostType.php:51
 msgid "All Events"
 msgstr "เหตุการณ์ทั้งหมด"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:47
+#: App/Controllers/Admin/Events/EventsPostType.php:52
 msgid "Event Archives"
 msgstr "คลังเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:48
+#: App/Controllers/Admin/Events/EventsPostType.php:53
 msgid "Insert into event"
 msgstr "เพิ่มในเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:49
+#: App/Controllers/Admin/Events/EventsPostType.php:54
 msgid "Upload to this event"
 msgstr "อัพโหลดไปยังเหตุการณ์นี้"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:50
+#: App/Controllers/Admin/Events/EventsPostType.php:55
 msgid "Filter events list"
 msgstr "กรองรายการเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:51
+#: App/Controllers/Admin/Events/EventsPostType.php:56
 msgid "Events list navigation"
 msgstr "นำทางรายการเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:52
+#: App/Controllers/Admin/Events/EventsPostType.php:57
 msgid "Events list"
 msgstr "รายการเหตุการณ์"
 
-#: App/Controllers/Admin/Events/EventsPostType.php:57
+#: App/Controllers/Admin/Events/EventsPostType.php:62
 msgid "Manage events and display it on front-end."
 msgstr "จัดการเหตุการณ์และแสดงมันบนด้านหน้าเว็บ."
 
-#: App/Controllers/Admin/PluginMetaAndLinks.php:73
-msgid "Donate"
-msgstr "บริจาค"
-
-#: App/Controllers/Admin/Settings.php:23
+#: App/Controllers/Admin/Settings.php:28
 msgid "Settings"
 msgstr "ตั้งค่า"
 
-#: App/Controllers/Front/EnqueueStyleScript.php:47 App/Widgets/CalendarWidget.php:57
+#: App/Controllers/Front/EnqueueStyleScript.php:64 App/Widgets/CalendarWidget.php:62
 msgid "Day"
 msgstr "วัน"
 
-#: App/Controllers/Front/EnqueueStyleScript.php:48 App/Widgets/CalendarWidget.php:58
+#: App/Controllers/Front/EnqueueStyleScript.php:65 App/Widgets/CalendarWidget.php:63
 msgid "Week"
 msgstr "สัปดาห์"
 
-#: App/Controllers/Front/EnqueueStyleScript.php:49 App/Widgets/CalendarWidget.php:59
+#: App/Controllers/Front/EnqueueStyleScript.php:66 App/Widgets/CalendarWidget.php:64
 msgid "Month"
 msgstr "เดือน"
 
-#: App/Controllers/Front/EnqueueStyleScript.php:50 App/Widgets/CalendarWidget.php:60
+#: App/Controllers/Front/EnqueueStyleScript.php:67 App/Widgets/CalendarWidget.php:65
 msgid "Today"
 msgstr "วันนี้"
 
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:38 App/templates/single.php:28
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:44 App/templates/single.php:30
 msgid "Event date/time"
 msgstr "วัน/เวลา เหตุการณ์"
 
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:41 App/templates/single.php:34
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:47 App/templates/single.php:36
 msgid "All day event."
 msgstr "เหตุการณ์ทั้งวัน."
 
-#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:79 App/templates/archive.php:33
-#: App/Widgets/CalendarWidget.php:152 example/archive-use-normal-code.php:16
+#: App/Controllers/Front/Shortcodes/AvailableShortcodes.php:85 App/templates/archive.php:35
+#: App/Widgets/CalendarWidget.php:157 example/archive-use-normal-code.php:16
 msgid "Getting events data"
 msgstr "กำลังดึงข้อมูลเหตุการณ์"
 
-#: App/templates/single.php:50
+#: App/templates/single.php:55
+msgid "Open on Google Maps"
+msgstr "เปิดบนกูเกิลแมปส์"
+
+#: App/templates/single.php:63
 msgid "Not found"
 msgstr "ไม่พบ"
 
-#: App/templates/single.php:51
+#: App/templates/single.php:64
 msgid "Nothing found."
 msgstr "ไม่พบอะไร."
 
@@ -257,27 +247,35 @@ msgid "Google APIs Manager"
 msgstr ""
 
 #: App/Views/Admin/Settings/settingsPageAction_v.php:28
-msgid "Google Maps JavaScript API "
+msgid "Maps JavaScript API"
+msgstr ""
+
+#: App/Views/Admin/Settings/settingsPageAction_v.php:29
+msgid "Places API"
+msgstr ""
+
+#: App/Views/Admin/Settings/settingsPageAction_v.php:30
+msgid "Geocoding API"
 msgstr ""
 
 #. translators: %s: Credentials text.
-#: App/Views/Admin/Settings/settingsPageAction_v.php:32
+#: App/Views/Admin/Settings/settingsPageAction_v.php:35
 msgid "Go to %s and create API key and then copy the key to this input."
 msgstr "ไปยัง %s และสร้างรหัส API จากนั้นคัดลอกรหัสมาใส่ในช่องนี้."
 
-#: App/Views/Admin/Settings/settingsPageAction_v.php:33
+#: App/Views/Admin/Settings/settingsPageAction_v.php:36
 msgid "Credentials"
 msgstr ""
 
-#: App/Views/Admin/Settings/settingsPageAction_v.php:40
+#: App/Views/Admin/Settings/settingsPageAction_v.php:43
 msgid "Use Ajax events"
 msgstr "ใช้ Ajax"
 
-#: App/Views/Admin/Settings/settingsPageAction_v.php:44
+#: App/Views/Admin/Settings/settingsPageAction_v.php:47
 msgid "Check this to use Ajax to get events, otherwise it will render all events into js at once."
 msgstr "ติ๊กกล่องนี้เพื่อใช้ Ajax ในการดึงค่าเหตุการณ์ต่างๆ, หากไม่ติ๊กมันจะส่งค่าเหตุการณ์ทั้งหมดในทีเดียว."
 
-#: App/Views/Admin/Settings/settingsPageAction_v.php:48
+#: App/Views/Admin/Settings/settingsPageAction_v.php:51
 msgid ""
 "If you want to reduce connection to server (such as ajax) or if you want to generate static HTML "
 "from WordPress, uncheck this box can help your front-end display events without any request to "
@@ -286,17 +284,26 @@ msgstr ""
 "ถ้าคุณต้องการลดการเชื่อมต่อไปยังเซิร์ฟเวอร์ (อย่างเช่น Ajax) หรือถ้าคุณต้องการสร้างเว็บแบบ HTML คงที่จากเวิร์ดเพรส, "
 "ไม่ติ๊กกล่องนี้จะช่วยให้หน้าเว็บของคุณแสดงเหตุการณ์โดยไม่ต้องดึงข้อมูลจากเซิร์ฟเวอร์."
 
-#: App/Widgets/CalendarWidget.php:27
+#: App/Widgets/CalendarWidget.php:32
 msgid "Events Calendar"
 msgstr "ปฏิทินเหตุการณ์"
 
-#: App/Widgets/CalendarWidget.php:29
+#: App/Widgets/CalendarWidget.php:34
 msgid "Display events in the calendar widget."
 msgstr "แสดงเหตุการณ์ในวิดเจ็ตปฏิทิน."
 
-#: App/Widgets/CalendarWidget.php:156
+#: App/Widgets/CalendarWidget.php:161
 msgid "See more"
 msgstr "ดูเพิ่มเติม"
+
+#~ msgid "Your WordPress version does not meet the requirement. (%1$s < %2$s)."
+#~ msgstr "รุ่นเวิร์ดเพรสของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%1$s < %2$s)."
+
+#~ msgid "Your PHP version does not meet the requirement. (%1$s < %2$s)."
+#~ msgstr "รุ่น PHP ของคุณไม่ตรงตามความต้องการขั้นต่ำ. (%1$s < %2$s)."
+
+#~ msgid "Donate"
+#~ msgstr "บริจาค"
 
 #~ msgid "You do not have permission to access this page."
 #~ msgstr "คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้."
@@ -433,11 +440,11 @@ msgstr "ดูเพิ่มเติม"
 #~ msgstr "อย่างไรก็ตาม, คุณสามารถเขียนทับค่าต่างๆเหล่านั้นโดยเพิ่มพารามิเตอร์ลงในช็อตโค้ด."
 
 #~ msgid ""
-#~ "Please refer to this <a href=\"https://developers.google.com/youtube/player_parameters\" target="
-#~ "\"_blank\">document page</a>."
+#~ "Please refer to this <a href=\"https://developers.google.com/youtube/player_parameters\" "
+#~ "target=\"_blank\">document page</a>."
 #~ msgstr ""
-#~ "โปรดอ้างอิงจาก <a href=\"https://developers.google.com/youtube/player_parameters\" target=\"_blank"
-#~ "\">หน้าเอกสารนี้</a>."
+#~ "โปรดอ้างอิงจาก <a href=\"https://developers.google.com/youtube/player_parameters\" "
+#~ "target=\"_blank\">หน้าเอกสารนี้</a>."
 
 #~ msgid "For example: I will set the player to autoplay and do not auto hide video controls."
 #~ msgstr "ตัวอย่าง: ฉันจะกำหนดตัวเล่นให้เล่นอัตโนมัติและไม่ต้องซ่อนตัวควบคุมวิดีโอ."
@@ -561,8 +568,8 @@ msgstr "ดูเพิ่มเติม"
 #~ "youtube/v3/docs/videos/list\" target=\"_blank\">2 more quota</a>."
 #~ msgstr ""
 #~ "เปิดใช้เพื่อดึงข้อมูลวิดีโอบน YouTube (contentDetails). ตัวอย่างเช่น ความยาว, ความละเอียด, คำบรรยาย. "
-#~ "การตั้งค่านี้ต้องการ <a href=\"https://developers.google.com/youtube/v3/docs/videos/list\" target="
-#~ "\"_blank\">2 โควต้าเพิ่มเติม</a>."
+#~ "การตั้งค่านี้ต้องการ <a href=\"https://developers.google.com/youtube/v3/docs/videos/list\" "
+#~ "target=\"_blank\">2 โควต้าเพิ่มเติม</a>."
 
 #~ msgid "Get video resources"
 #~ msgstr "ดึงทรัพยากรวิดีโอ"
@@ -721,8 +728,8 @@ msgstr "ดูเพิ่มเติม"
 #~ "docs/videos/list\" target=\"_blank\">2 more quota</a>."
 #~ msgstr ""
 #~ "เปิดใช้เพื่อรับข้อมูลทรัพยากรของวิดีโอเพิ่มเติมบนยูทูบ. เช่น ระยะเวลา, ขนาด, ความละเอียด, แคปชั่น. การตั้งค่านี้ต้องการ "
-#~ "<a href=\"https://developers.google.com/youtube/v3/docs/videos/list\" target=\"_blank"
-#~ "\">ใช้โควต้าเพิ่มอีก 2 หน่วย</a>."
+#~ "<a href=\"https://developers.google.com/youtube/v3/docs/videos/list\" "
+#~ "target=\"_blank\">ใช้โควต้าเพิ่มอีก 2 หน่วย</a>."
 
 #~ msgid "Select how video controls will automatically hide after video begins playing."
 #~ msgstr "เลือกว่าตัวควบคุมวิดีโอจะซ่อนอัตโนมัติหลังจากเล่นอย่างไร."

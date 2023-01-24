@@ -39,7 +39,19 @@ if (!class_exists('\\RdEvents\\App\\Controllers\\Front\\EnqueueStyleScript')) {
             // register scripts ------------------------------------------------------------------
             // for display maps in single page or details page.
             wp_register_script('rd-events-map-functions', rdevents_getRundizEventsMapFunctionUrl(), ['jquery'], RDEVENTS_VERSION, true);
-            wp_register_script('rd-events-google-map-api', rdevents_getGoogleMapsApiUrl(), [], false, true);
+            $mapHTMLId = 'rundiz-events-map';
+            $mapHTMLId = apply_filters('rd_events_maphtmlid', $mapHTMLId);
+            wp_localize_script(
+                'rd-events-map-functions',
+                'RdEventsMap',
+                [
+                    'marker' => null,
+                    'map' => null,
+                    'mapHTMLId' => $mapHTMLId,
+                ]
+            );
+            unset($mapHTMLId);
+            wp_register_script('rd-events-google-map-api', rdevents_getGoogleMapsApiUrl() . '&callback=rdEventsFrontInitMap', ['rd-events-map-functions'], false, true);
             // for display calendar in archive page.
             wp_register_script('rd-events-fullcalendar-moment', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/front/fullcalendar/lib/moment.min.js', ['jquery'], $fullcalendar_version, true);
             wp_register_script('rd-events-fullcalendar', trailingslashit(plugin_dir_url(RDEVENTS_FILE)).'assets/js/front/fullcalendar/fullcalendar.min.js', ['jquery'], $fullcalendar_version, true);

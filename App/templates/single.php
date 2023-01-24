@@ -41,7 +41,18 @@ get_header();
                             if (null !== $location) {
                                 echo '<h4>' . __('Location', 'rd-events') . '</h4>';
                                 if (isset($location['location'])) {
-                                    echo '<p>'.$location['location'].'</p>';
+                                    $gmapsParams = '';
+                                    if (array_key_exists('lat', $location)) {
+                                        $gmapsParams .= rawurlencode($location['lat']);
+                                    }
+                                    if (array_key_exists('lng', $location)) {
+                                        if (!empty($gmapsParams)) {
+                                            $gmapsParams .= ',';
+                                        }
+                                        $gmapsParams .= rawurlencode($location['lng']);
+                                    }
+
+                                    echo '<p><a href="https://www.google.com/maps/search/?api=1&amp;query=' . $gmapsParams . '" target="googlemaps" title="' . esc_attr__('Open on Google Maps', 'rd-events') . '">'.$location['location'].'</a></p>';
                                 }
                                 echo '<div id="rundiz-events-map" class="rundiz-events-map" data-markerlat="'.(isset($location['lat']) ? $location['lat'] : '').'" data-markerlng="'.(isset($location['lng']) ? $location['lng'] : '').'" data-mapzoom="12"></div>';
                             }

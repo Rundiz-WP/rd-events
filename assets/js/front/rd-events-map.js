@@ -9,68 +9,106 @@
  * @param {string} map_id
  * @returns {undefined}
  */
-function rdEventsInitMap(map_id) {
-    $ = jQuery.noConflict();
+function rdEventsFrontInitMap(map_id) {
+    let defaultLatLng = {lat: 13.736717, lng: 100.523186};// Bangkok.
+    const mapHTML = document.getElementById(RdEventsMap.mapHTMLId);
+    let mapZoom = 12;
 
-    var rdevents_default_location_bangkok = {lat: 13.736717, lng: 100.523186};
-    var rdevents_map_html = document.getElementById(map_id);
-    var rdevents_map_zoom = 12;
-
-    if (typeof(rdevents_map_html) === 'undefined' || rdevents_map_html === null || rdevents_map_html === '') {
+    if (typeof(mapHTML) !== 'object') {
         // if no map showup, no more works here.
-        console.log('no maps here.');
+        console.warn('No maps here.');
         return ;
     }
 
+    // verify and correct map zoom level.
+    mapZoom = rdEventsFrontVerifyMapZoom(mapHTML, mapZoom);
+
+    // setup maps.
+    RdEventsMap.map = new google.maps.Map(mapHTML, {
+        'center': defaultLatLng,
+        'zoom': mapZoom,
+    });
+
+    // setup marker variable (object) for use later.
+    RdEventsMap.marker = new google.maps.Marker({
+        map: RdEventsMap.map
+    });
+
+    // check that mapHTML has dataset about marker then add marker.
+    rdEventsFrontSetMarker(mapHTML);
+}// rdEventsFrontInitMap
+
+
+/**
+ * Check that mapHTML has dataset about marker then add marker.
+ * 
+ * @param {object} mapHTML
+ * @returns {undefined}
+ */
+function rdEventsFrontSetMarker(mapHTML) {
     if (
-        typeof(rdevents_map_html) !== 'undefined' &&
-        typeof(rdevents_map_html.dataset) !== 'undefined' &&
-        typeof(rdevents_map_html.dataset.mapzoom) !== 'undefined'
+        typeof(mapHTML) !== 'undefined' &&
+        typeof(mapHTML.dataset) !== 'undefined' &&
+        typeof(mapHTML.dataset.markerlat) !== 'undefined' &&
+        typeof(mapHTML.dataset.markerlng) !== 'undefined'
     ) {
-        if (parseInt(rdevents_map_html.dataset.mapzoom) < 1 && parseInt(rdevents_map_html.dataset.mapzoom) > 20) {
-            rdevents_map_zoom = 12;
+        // there are values of lat, lng. add the marker.
+        const markerPosition = new google.maps.LatLng(mapHTML.dataset.markerlat, mapHTML.dataset.markerlng);
+
+        RdEventsMap.marker.setPosition(markerPosition);
+        RdEventsMap.marker.setVisible(true);
+        RdEventsMap.marker.setClickable(true);
+        RdEventsMap.map.setCenter(markerPosition);
+    }
+}// rdEventsFrontSetMarker
+
+
+/**
+ * Verify and correct map zoom level.
+ * 
+ * @private This method was called from `rdEventsFrontInitMap()`.
+ * @param {object} mapHTML 
+ * @param {int} mapZoom 
+ * @returns {int} Return verified and corrected mapZoom.
+ */
+function rdEventsFrontVerifyMapZoom(mapHTML, mapZoom) {
+    if (
+        typeof(mapHTML) === 'object' &&
+        typeof(mapHTML.dataset) !== 'undefined' &&
+        typeof(mapHTML.dataset.mapzoom) !== 'undefined'
+    ) {
+        if (parseInt(mapHTML.dataset.mapzoom) < 1 && parseInt(mapHTML.dataset.mapzoom) > 20) {
+            mapZoom = 12;
         } else {
-            rdevents_map_zoom = parseInt(rdevents_map_html.dataset.mapzoom);
+            mapZoom = parseInt(mapHTML.dataset.mapzoom);
         }
     }
 
-    rdevents_map = new google.maps.Map(rdevents_map_html, {
-        zoom: rdevents_map_zoom,
-        center: rdevents_default_location_bangkok
+    return mapZoom;
+}// rdEventsFrontVerifyMapZoom
+
+
+/**
+ * Initialize Google Maps base.
+ * 
+ * This function must be called first after Google Maps JS loaded.
+ * 
+ * @since 1.0.2
+ * @private This method was called from `rdEventsFrontInitMap()`.
+ * @returns {undefined}
+ */
+function rdEventsInitMapBase() {
+    let defaultLatLng = {lat: 13.736717, lng: 100.523186};// Bangkok.
+    const mapHTML = document.getElementById(RdEventsMap.mapHTMLId);
+
+    RdEventsMap.map = new google.maps.Map(mapHTML, {
+        center: defaultLatLng,
+        zoom: 12,
     });
-
-    rdevents_marker = new google.maps.Marker({
-        map: rdevents_map
-    });
-
-    // check that this page already set marker or not, if yes then add marker.
-    if (
-        typeof(rdevents_map_html) !== 'undefined' &&
-        typeof(rdevents_map_html.dataset) !== 'undefined' &&
-        typeof(rdevents_map_html.dataset.markerlat) !== 'undefined' &&
-        typeof(rdevents_map_html.dataset.markerlng) !== 'undefined'
-    ) {
-        // there are values of lat, lng. add the marker.
-        var current_marker_on_loaded = new google.maps.LatLng(rdevents_map_html.dataset.markerlat, rdevents_map_html.dataset.markerlng);
-        rdevents_marker.setPosition(current_marker_on_loaded);
-        rdevents_marker.setVisible(true);
-        rdevents_map.setCenter(current_marker_on_loaded);
-        delete current_marker_on_loaded;
-    }
-
-    // clear.
-    delete rdevents_default_location_bangkok;
-    delete rdevents_map_html;
-    delete rdevents_map_zoom;
-}// rdEventsInitMap
-
-
-// set variable for global use.
-var rdevents_map;
-var rdevents_marker;
+}// rdEventsInitMapBase
 
 
 // on page loaded ---------------------------------------------------------------------------
 jQuery(function($) {
-    rdEventsInitMap('rundiz-events-map');
+
 });

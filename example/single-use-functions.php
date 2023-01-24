@@ -29,7 +29,7 @@ if (null !== $location) {
 
     // These script tags are not recommended, just example.
     echo '<script src="'.rdevents_getRundizEventsMapFunctionUrl().'"></script>';// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
-    echo '<script src="'.rdevents_getGoogleMapsApiUrl().'"></script>';// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
+    echo '<script src="'.rdevents_getGoogleMapsApiUrl().'&callback=yourCallbackFunction"></script>';// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
 
     // Use wp_enqueue_script() function instead.
     // You always need to enqueue these js files if you don't use shortcode.
