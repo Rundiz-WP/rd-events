@@ -76,6 +76,7 @@ function rdEventsInitMap() {
  * This function must be called first after Google Maps JS loaded.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsInitMapBase() {
@@ -92,6 +93,7 @@ function rdEventsInitMapBase() {
  * Activate auto complete.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsMapActivateAutoComplete() {
@@ -126,6 +128,7 @@ function rdEventsMapActivateAutoComplete() {
  * Also listen click on the marker and open info window.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsMapActivateInfoWindow() {
@@ -151,6 +154,7 @@ function rdEventsMapActivateInfoWindow() {
  * Check if there is no saved data, detect location by ask for user's current location.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsMapDetectLocation() {
@@ -173,6 +177,7 @@ function rdEventsMapDetectLocation() {
  * Listen on auto complete place has changed.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsMapListenAutocompletePlaceChanged() {
@@ -210,6 +215,7 @@ function rdEventsMapListenAutocompletePlaceChanged() {
  * Listen click on the map to add marker and set lat, lng.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsMapListenClickMapAddMarker() {
@@ -239,6 +245,7 @@ function rdEventsMapListenClickMapAddMarker() {
  * Listen on drag marker and then update lat, lng.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsMapListenDragMarkerChangeLatLng() {
@@ -270,6 +277,7 @@ function rdEventsMapListenDragMarkerChangeLatLng() {
  * Check that this page already set marker or not, if yes then add marker.
  * 
  * @since 1.0.2
+ * @private This method was called from `rdEventsInitMap()`.
  * @returns {undefined}
  */
 function rdEventsMapSetMarkerFromSaved() {
